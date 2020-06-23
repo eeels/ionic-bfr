@@ -1,0 +1,330 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="getCurrentLang()=='de'">Merkmal – Vorteil – Nutzen </ion-title>
+    <ion-title *ngIf="getCurrentLang()=='en'">Attribute – Advantage – Benefit</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-row *ngIf="textDefault=='notset'" class="ion-padding-vertical" id="notActive"
+  class="ion-text-center ion-align-items-end ion-justify-content-center ion-padding">
+  <div class="content">
+    <h2>{{ 'needto_activate' | translate }}</h2>
+    <ion-button color="primary" [routerDirection]="'root'" [routerLink]="['/barcode']">
+      <ion-icon name="barcode" style="display: inline-block; margin-right: 0.5em;"></ion-icon>
+      {{ 'menu.activate_pages' | translate }}
+    </ion-button>
+  </div>
+</ion-row>
+<ion-content *ngIf="getCurrentLang()=='de'" [ngClass]="{'offline' :textDefault=='notset'}">
+
+  <img src="/assets/img/karte-merkmalvorteilnutzen.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>Ziel</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was kann ich mit diesem Modell erreichen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Sie verkaufen mehr. Denn Sie können konkret sagen, warum das Produkt dem Kunden hilft, seine Ziele zu erreichen.
+      Ihr Argument trifft präzise.
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was ist die Ausgangslage?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      Für ein Produkt sprechen viele Argumente. Aber nur wenige davon erreichen den Kunden in einer Weise, dass er
+      bereit ist Geld auszugeben. Viele Argumente zu nennen ist der falsche Weg: Verwirrung ist keine gute Basis für ein
+      Geschäft. Aber welches ist das treffende?
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>LÖSUNGSANSATZ</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wie komme ich von der Ausgangslage zum Ziel?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+
+      <p>Wenn das Verkaufsargument passgenau sein soll gilt der Grundsatz: Vom Merkmal über den Vorteil zum Nutzen.
+      </p>
+      <p> Merkmal: Das Produktmerkmal beschreibt eine Eigenschaft, die für alle Kunden gilt. So hat im untenstehenden
+        Beispiel dasselbe Auto für jeden Käufer gleich viel PS. Und eine Anzeige in einer Zeitung wird von gleich vielen
+        Lesern gesehen, egal, wer sie bezahlt.
+      </p>
+      <p> Vorteil: Auch der Vorteil zielt auf das Produkt. Aber in den meisten Fällen führt ein Merkmal zu mehreren
+        Vorteilen. PS in einem Auto dienen der Beschleunigung an der Ampel, der Höchstgeschwindigkeit auf der Autobahn
+        und der Zugkraft beim Urlaub mit dem Wohnanhänger. Die Zeitungsanzeige kann allgemein dem Prestige dienen oder
+        ganz konkret um Kunden am nächsten Samstag werben.
+      </p>
+      <p> Nutzen: Das einzige, was den Kunden interessiert, ist der Nutzen. Erneut gilt: Ein Produktvorteil führt häufig
+        zu vielen möglichen Kundennutzen. Entscheidend ist die Frage, was auf den konkreten Kunden zutrifft. Unseren
+        Beispielkunden im Autohaus interessiert weder Sportlichkeit noch Komfort. Ihm geht es um alle, die seine
+        Garagenauffahrt einsehen können, ihm geht es um Prestige. Einem Einzelhändler als Anzeigenkunden hingegen ist
+        nur wichtig, dass der Laden am Markttag gut besucht ist.
+      </p>
+      <p> Um vom Merkmal über den Vorteil zum Nutzen zu kommen, muss der Verkäufer fragen, was der Kunde genau möchte.
+        Er muss den erwünschten Nutzen erkunden. Dann kann er äußerst gezielt beraten.
+      </p>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        LITERATUR
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p><b>Holger Steitz:</b><br> Verkaufen ohne Tricks und Kniffe: Mit System zum B2B-Vertriebserfolg</p>
+
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>QUERVERWEISE</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wo finde ich mehr zur Herleitung? Wie kann es weiter gehen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-argument']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Argument</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-interessenupositionen']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Interessen & Positionen</div>
+        </ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-senderuempfaenger']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Sender & Empfänger</div>
+        </ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-gespraechsleitfaden']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Gesprächsleitfaden</div>
+        </ion-label>
+      </ion-item>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>
+<ion-content *ngIf="getCurrentLang()=='en'" [ngClass]="{'offline' :textDefault=='notset'}">
+
+  <img src="/assets/img/karte-attribute.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>GOAL</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        What can I achieve with this model?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      You will have higher sales. For you can tell your customers precisely why your product will help them reach their
+      goals. Your argument hits the mark perfectly.
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        What is the situation?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      Many arguments speak in favor of a product, but only a few lead to a sale. It is wrong to name many arguments;
+      confusion is not a good basis for making a deal. But which argument is the right one?
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>SOLUTION</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        How do I achieve my goals?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+
+      <p> In order to find a sales argument that fits perfectly, the principle is: from attribute to advantage to
+        benefit. The card reads from the bottom up.
+      </p>
+      <p> Attribute: The attribute describes a property of the product that exists for all customers. Thus, in the
+        example below, the same car has the same horsepower no matter who the buyer is. And a newspaper advertisement
+        will be seen by the same number of readers, regardless of who pays for it.
+      </p>
+      <p> Advantage: The advantage is also tailored to the product. But in most cases, an attribute can lead to several
+        advantages. Horsepower can help a car get started faster at a stop light, reach top speed on the highway, and
+        tow a camper on vacation. The newspaper ad can aim at increasing prestige generally, or target customers
+        specifically next Saturday.
+      </p>
+      <p> Benefit: The only thing the customer cares about is what benefit he will get from the product. Once again, a
+        product’s advantage often leads to several possible customer benefits. The decisive question is what appeals to
+        the specific customer. The customer in our car dealership example isn’t interested in sportiness or comfort. He
+        cares about what others think, others who can see into his garage; he cares about prestige. The car dealer, when
+        buying an advertisement, cares only that many customers visit his store.
+      </p>
+      <p> In order to proceed from attribute to advantage to benefit, the seller must ask the buyer what exactly he
+        wants. Once the desired advantage is discovered, the proper pitch can be made.
+      </p>
+
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>FURTHER READING</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Where can I find more about derivation? How can it go on?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p><b>Kenneth Roman and Jane Maas:</b><br>How To Advertise </p>
+      <p><b>101 Examples of Features Versus Benefits:</b><br>How To Advertise  <a href="https://www.vappingo.com/word-blog/examples-of-features-versus-benefits/"          target="_blank">Benefits </a></p>
+
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>CROSS-REFERENCES</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Where can I get more background information?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-argument']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Argument</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-interessenupositionen']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Interests & Positions</div>
+        </ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-senderuempfaenger']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Sender & Receiver</div>
+        </ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-gespraechsleitfaden']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Conversation Guide </div>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/home']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/cards']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="logo-buffer"></ion-icon>
+      </ion-button>
+      <ion-button [routerDirection]="'root'" [routerLink]="['/barcode']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="barcode"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,22 @@
+
+{
+
+
+    "language": "Deutsch",
+    "needto_activate":"Diese Karte wurde noch nicht freigeschaltet.",
+    "menu": {
+        "activate_pages": "jetzt Karten freischalten",
+        "buy_dress": "Buy / Rent a Dress",
+        "add_dress": "Add Dress for Sale/Rental",
+        "register": "Register a new account",
+        "login": "Login to your account",
+        "my_ads": "My Ads",
+        "logout": "Logout",
+        "languageChangePlaceholder": "Deutsch"
+    },
+    "home": {
+        "other_language": " العربية",
+        "buy_dress": "Buy / Rent ",
+        "add_dress": "Add Dress"
+    }
+}

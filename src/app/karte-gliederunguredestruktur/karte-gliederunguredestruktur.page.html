@@ -1,0 +1,284 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="getCurrentLang()=='de'">Gliederung und Redestruktur</ion-title>
+    <ion-title *ngIf="getCurrentLang()=='en'">Gliederung und Redestruktur</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-row *ngIf="textDefault=='notset'" class="ion-padding-vertical" id="notActive"  class="ion-text-center ion-align-items-end ion-justify-content-center ion-padding">
+  <div class="content">
+    <h2>{{ 'needto_activate' | translate }}</h2>
+    <ion-button color="primary" [routerDirection]="'root'" [routerLink]="['/barcode']">
+      <ion-icon name="barcode" style="display: inline-block; margin-right: 0.5em;"></ion-icon>
+      {{ 'menu.activate_pages' | translate }}
+    </ion-button>
+  </div>
+</ion-row>
+<ion-content *ngIf="getCurrentLang()=='de'" [ngClass]="{'offline' :textDefault=='notset'}">
+
+  <img src="/assets/img/karte-gliederunguredestruktur.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>Ziel</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was kann ich mit diesem Modell erreichen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Sie bauen eine Rede sachgerecht und zuhörerorientiert auf. Dabei machen Sie mit dem Rahmen der Rede alles richtig: präziser Einstieg, zielgerichteter Hauptteil, gewinnender Schluss.
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was ist die Ausgangslage?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      Was muss gesagt werden, bevor der Redner zum Punkt kommt? Was sind seine Redeziele? Und welcher Schluss rundet die Rede gelungen ab? Bei diesen grundlegenden Aspekten lässt sich viel verlieren und noch mehr gewinnen.
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>LÖSUNGSANSATZ</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wie komme ich von der Ausgangslage zum Ziel?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <p>Sowohl die Vorbereitung als auch die Rede profitieren von einem stabilen Rahmen aus Einleitung, Hauptteil und Schluss. Am Ende sollten diese drei Teile als Faustformel am besten 15, 75 und 10 Prozent der Redezeit in Anspruch nehmen. Entscheidend ist aber, was in diesen drei Teilen gesagt wird. 
+      </p><ol><li>	Eine Einleitung sollte viererlei leisten. Erstens werden die Adressaten so spezifisch wie möglich angesprochen, „meine Damen und Herren“ ist höchstens die Auffangformel für bisher Ungenannte. Aufmerksamkeit zu gewinnen, ist die zweite Aufgabe. Drittens sollte sich der Redner vorstellen, sofern das nicht (wirklich!) als erledigt gelten darf. Viertens bleibt, möglichst schnell zum Thema hinzuführen. Im Idealfall sind diese Aspekte miteinander verknüpft, z. B. indem ein Satz zur Person des Redners oder ein Witz einen Anknüpfungspunkt für das Thema bietet.
+      </li><li>Der Hauptteil bedarf zumeist einer weiteren Untergliederung. Diese kann bei einer inhaltsreichen Überzeugungsrede eine Argumentation sein, bei einer launischen Festrede sind es vielleicht drei Anekdoten. Der hier vorgestellte Rahmen verhilft der gewählten Substruktur zur Geltung.
+      </li><li>	Die finalen Sätze in gelungenen Reden sind anspruchsvoll: Sie sind zielgerichtet, nehmen kaum Zeit in Anspruch, und ziehen doch ein Fazit, verabschieden das Publikum, beinhalten nach Bedarf Appell, Dank, Ausblick und Zusammenfassung. Nicht jede Aussage braucht einen eigenen Satz. Aber störender als ein Wort zu viel ist die Floskel. Wege aus der Floskelfalle sind u. A. persönliche Meinung und Präzision. So könnte der aufmerksame Redner für die Aufmerksamkeit danken mit Verweis auf den ablenkenden Duft vom Buffet.
+      </li> </ol>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        LITERATUR
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <p><b>Karl-Heinz Göttert:</b><br>  Einführung in die Rhetorik</p>
+      <p><b> Video:</b> <br> <a href="https://www.youtube.com/watch?v=8S0FDjFBj8o"      target="_blank">https://www.youtube.com/watch?v=8S0FDjFBj8o</a></p>
+
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>QUERVERWEISE</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wo finde ich mehr zur Herleitung? Wie kann es weiter gehen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-beziehungsdreieck']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Redenschreiben – Beziehungsdreieck</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-argumentation']">
+      <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> 
+      Argumentation</div>
+    </ion-label>
+  </ion-item>
+  <ion-item [routerDirection]="'root'" [routerLink]="['/karte-lokikinargument']">
+  <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+    <ion-label>
+      <div class="item"> 
+      Logik in Argument und Argumentation</div>
+    </ion-label>
+  </ion-item>
+
+
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>
+<ion-content *ngIf="getCurrentLang()=='en'" [ngClass]="{'offline' :textDefault=='notset'}">
+  <img src="/assets/img/karte-gliederunguredestruktur.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>Ziel</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was kann ich mit diesem Modell erreichen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Sie bauen eine Rede sachgerecht und zuhörerorientiert auf. Dabei machen Sie mit dem Rahmen der Rede alles richtig: präziser Einstieg, zielgerichteter Hauptteil, gewinnender Schluss.
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was ist die Ausgangslage?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      Was muss gesagt werden, bevor der Redner zum Punkt kommt? Was sind seine Redeziele? Und welcher Schluss rundet die Rede gelungen ab? Bei diesen grundlegenden Aspekten lässt sich viel verlieren und noch mehr gewinnen
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>LÖSUNGSANSATZ</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wie komme ich von der Ausgangslage zum Ziel?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <p>Sowohl die Vorbereitung als auch die Rede profitieren von einem stabilen Rahmen aus Einleitung, Hauptteil und Schluss. Am Ende sollten diese drei Teile als Faustformel am besten 15, 75 und 10 Prozent der Redezeit in Anspruch nehmen. Entscheidend ist aber, was in diesen drei Teilen gesagt wird. 
+      </p><ol><li>	Eine Einleitung sollte viererlei leisten. Erstens werden die Adressaten so spezifisch wie möglich angesprochen, „meine Damen und Herren“ ist höchstens die Auffangformel für bisher Ungenannte. Aufmerksamkeit zu gewinnen, ist die zweite Aufgabe. Drittens sollte sich der Redner vorstellen, sofern das nicht (wirklich!) als erledigt gelten darf. Viertens bleibt, möglichst schnell zum Thema hinzuführen. Im Idealfall sind diese Aspekte miteinander verknüpft, z. B. indem ein Satz zur Person des Redners oder ein Witz einen Anknüpfungspunkt für das Thema bietet.
+      </li><li>Der Hauptteil bedarf zumeist einer weiteren Untergliederung. Diese kann bei einer inhaltsreichen Überzeugungsrede eine Argumentation sein, bei einer launischen Festrede sind es vielleicht drei Anekdoten. Der hier vorgestellte Rahmen verhilft der gewählten Substruktur zur Geltung.
+      </li><li>	Die finalen Sätze in gelungenen Reden sind anspruchsvoll: Sie sind zielgerichtet, nehmen kaum Zeit in Anspruch, und ziehen doch ein Fazit, verabschieden das Publikum, beinhalten nach Bedarf Appell, Dank, Ausblick und Zusammenfassung. Nicht jede Aussage braucht einen eigenen Satz. Aber störender als ein Wort zu viel ist die Floskel. Wege aus der Floskelfalle sind u. A. persönliche Meinung und Präzision. So könnte der aufmerksame Redner für die Aufmerksamkeit danken mit Verweis auf den ablenkenden Duft vom Buffet.
+      </li> </ol>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        LITERATUR
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <p><b>Karl-Heinz Göttert:</b><br>  Einführung in die Rhetorik</p>
+      <p><b> Video:</b> <br> <a href="https://www.youtube.com/watch?v=8S0FDjFBj8o"      target="_blank">https://www.youtube.com/watch?v=8S0FDjFBj8o</a></p>
+
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>QUERVERWEISE</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wo finde ich mehr zur Herleitung? Wie kann es weiter gehen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-beziehungsdreieck']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Redenschreiben – Beziehungsdreieck</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-argumentation']">
+      <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> 
+      Argumentation</div>
+    </ion-label>
+  </ion-item>
+  <ion-item [routerDirection]="'root'" [routerLink]="['/karte-lokikinargument']">
+  <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+    <ion-label>
+      <div class="item"> 
+      Logik in Argument und Argumentation</div>
+    </ion-label>
+  </ion-item>
+
+
+
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/home']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/cards']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="logo-buffer"></ion-icon>
+      </ion-button>
+      <ion-button [routerDirection]="'root'" [routerLink]="['/barcode']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="barcode"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,302 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="getCurrentLang()=='de'">Sender und Empfänger</ion-title>
+    <ion-title *ngIf="getCurrentLang()=='en'">Sender and Receiver</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-row *ngIf="textDefault=='notset'" class="ion-padding-vertical" id="notActive"  class="ion-text-center ion-align-items-end ion-justify-content-center ion-padding">
+  <div class="content">
+    <h2>{{ 'needto_activate' | translate }}</h2>
+    <ion-button color="primary" [routerDirection]="'root'" [routerLink]="['/barcode']">
+      <ion-icon name="barcode" style="display: inline-block; margin-right: 0.5em;"></ion-icon>
+      {{ 'menu.activate_pages' | translate }}
+    </ion-button>
+  </div>
+</ion-row>
+<ion-content *ngIf="getCurrentLang()=='de'" [ngClass]="{'offline' :textDefault=='notset'}">
+
+  <img src="/assets/img/karte-senderuempfaenger.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>Ziel</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was kann ich mit diesem Modell erreichen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Sie verstehen Andere besser und werden von Anderen besser verstanden, weil Sie verschiedene Ebenen und Schritte der unmittelbaren, zwischenmenschlichen Kommunikation berücksichtigen.
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was ist die Ausgangslage?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      Wer zu sehr von sich ausgeht, gefährdet den Erfolg von Kommunikation. Denn diese Person könnte glauben, immer zu sagen, was sie meint und auszudrücken, was sie empfindet. Sie könnte entsprechendes Verstehen und Erleben des Gegenübers voraussetzen. Ein ziemlich sicherer Weg zu Missverständnissen!
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>LÖSUNGSANSATZ</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wie komme ich von der Ausgangslage zum Ziel?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+    
+      <p>Sender und Empfänger sind füreinander undurchschaubar. Trotzdem lässt die Kommunikation Rückschlüsse auf das Gegenüber zu. Schematisch dargestellt drückt sich das eigene Meinen und Empfinden durch Worte und Verhalten aus. Der Empfänger nimmt diese Botschaften durch alle Sinne wahr. Das wiederum löst Verstehen und Erleben aus. Könnte man aber Meinen und Verstehen sowie Empfinden und Erleben übereinanderlegen, würden frappierende Unterschiede deutlich werden, selbst, wenn sich alle blendend zu verstehen glauben.
+      </p>
+      <p>  Das Verständnis ist in vielen Fällen auch ausreichend genau, insbesondere dann, wenn die Botschaften der Sach- und Beziehungsebene als kongruent wahrgenommen werden. Im Zweifel folgt der Empfänger seinem Eindruck und Erleben, also der Beziehungsebene. Weniger Gewicht wird dann dem Sachgehalt beigemessen.
+      </p>
+      <p>  Inwieweit die Botschaften zusammenpassen, kann sich der Sender nur durch die Antwort des Empfängers erschließen, sei diese ausschließlich nonverbal oder zudem verbal. Der Empfänger wird also zum Sender. In der Praxis sind natürlich beide Parteien gleichzeitig Sender und Empfänger, solange sie sich gegenseitig wahrnehmen. Der wahrscheinlich meistzitierte Satz zur zwischenmenschlichen Kommunikation lautet entsprechend: „Man kann nicht nicht kommunizieren“.
+      </p>
+      <p>  Für den Alltag bleiben folgende Grundregeln: Auf den eigenen Ausdruck achten und den eigenen Eindruck ernstnehmen. Als inkongruent wahrgenommene Botschaften thematisieren. Und bei Unsicherheiten in der Wahrnehmung die Aussage des Gegenübers in eigenen Worten wiederholen (Paraphrasieren) verbunden mit der Frage, ob das richtig verstanden ist.
+        </p>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        LITERATUR
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      
+   
+
+      <p><b>Paul Watzlawick:</b><br> Menschliche Kommunikation</p>
+
+
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>QUERVERWEISE</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wo finde ich mehr zur Herleitung? Wie kann es weiter gehen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-lobukritik']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Lob & Kritik  </div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-gespraechsleitfaden']">
+      <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">  Gesprächsleitfaden</div>
+        </ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-selbstbildfremdbild']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Selbstbild & Fremdbild nach Johari</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-merkmalvorteilnutzen']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Merkmal – Vorteil – Nutzen</div>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>
+<ion-content *ngIf="getCurrentLang()=='en'" [ngClass]="{'offline' :textDefault=='notset'}">
+
+  <img src="/assets/img/karte-sendereng.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>GOAL</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        What can I achieve with this model?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      By paying attention to the various levels and steps of direct interpersonal communication, you will understand others better and be understood by them better.
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        What is the situation?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      Many conversations are plagued by unintelligibility and – what is usually worse – by misunderstanding. 
+      A common reaction is the justification: “But that’s what I meant!”
+      
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>SOLUTION</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        How do I achieve my goals?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+    
+      <p> Sender and receiver are not immediately transparent to one another. Rather, communication helps one 
+        make inferences about the other. As illustrated below, meaning and perception are expressed by words 
+        and behavior. The receiver perceives these messages using all the senses, thus triggering understanding and experience. The divide between meaning and understanding, as well as between perception and experience, varies continuously in intensity and character, even when all involved believe they understand everything perfectly.
+        Understanding is sufficiently precise when messages on the factual and relational levels are perceived as congruent with one another. When in doubt, however, the receiver follows his impression and experience, that is the relational level. Less importance is then ascribed to factual content.
+        What has been understood is reflected in the receiver’s (nonverbal and verbal) response. Thus the receiver becomes the sender. In practice, of course, both parties are simultaneously sender and receiver. Accordingly, one of the most cited remarks about interpersonal communication goes: “You cannot not communicate.”
+        The following basic rules are essential to everyday communication:   </p>
+        <ul><li>
+     	Pay attention to how you express yourself, and take your own impression seriously. 
+        </li><li>	If you perceive messages as incongruent, say so. 
+        </li><li>	If you are uncertain about what your conversation partner has said, repeat his statement in your own words (paraphrase) and ask if you have understood correctly.
+        </li></ul>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>FURTHER READING</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+      Where can I find more about derivation? How can it go on?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+     <p><b>Paul Watzlawick:  </b><br> Pragmatics of Human Communication</p>
+    
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>CROSS-REFERENCES</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+       Where can I get more background information?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-lobukritik']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Praise & Criticism </div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-gespraechsleitfaden']">
+      <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Conversation Guide</div>
+        </ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-selbstbildfremdbild']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Perception of Self & Others (according to Johari)</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-merkmalvorteilnutzen']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Attribute – Advantage – Benefit </div>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/home']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/cards']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="logo-buffer"></ion-icon>
+      </ion-button>
+      <ion-button [routerDirection]="'root'" [routerLink]="['/barcode']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="barcode"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

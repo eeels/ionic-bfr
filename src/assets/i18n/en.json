@@ -1,0 +1,16 @@
+
+{
+
+    "language": "English",
+    "needto_activate":"This card has not been unlocked yet.",
+
+    "menu": {
+        "activate_pages": "activate cards now",
+        "ihre_karten": "activate cards now"
+    },
+    "page": {
+        "other_language": " العربية",
+        "buy_dress": "Buy / Rent ",
+        "add_dress": "Add Dress"
+    }
+}

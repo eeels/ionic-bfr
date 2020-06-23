@@ -1,0 +1,276 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="getCurrentLang()=='de'">Motivation</ion-title>
+    <ion-title *ngIf="getCurrentLang()=='en'">Motivation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-row *ngIf="textDefault=='notset'" class="ion-padding-vertical" id="notActive"  class="ion-text-center ion-align-items-end ion-justify-content-center ion-padding">
+  <div class="content">
+    <h2>{{ 'needto_activate' | translate }}</h2>
+    <ion-button color="primary" [routerDirection]="'root'" [routerLink]="['/barcode']">
+      <ion-icon name="barcode" style="display: inline-block; margin-right: 0.5em;"></ion-icon>
+      {{ 'menu.activate_pages' | translate }}
+    </ion-button>
+  </div>
+</ion-row>
+<ion-content *ngIf="getCurrentLang()=='de'" [ngClass]="{'offline' :textDefault=='notset'}">
+
+  <img src="/assets/img/karte-motivation.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>Ziel</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was kann ich mit diesem Modell erreichen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Sie helfen Ihren Mitarbeitern sich gezielt und anhaltend für Ziele und zum Handeln zu motivieren. Dadurch erhöhen auch Sie als Führungskraft Ihren beruflichen Erfolg.
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was ist die Ausgangslage?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      Führungskräfte möchten Mitarbeiter gezielt beeinflussen, sodass diese ihre Aufgaben sachgerecht erfüllen. Aber was motiviert? Und auf welche Weise?
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>LÖSUNGSANSATZ</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wie komme ich von der Ausgangslage zum Ziel?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+     
+      <p> Motivation wird mit der Unterscheidung von extrinsischen und intrinsischen Faktoren für eine Führungskraft handhabbarer. Extrinsisch ist dabei eine Motivation, die von der Aussicht auf konkrete Vorteile wie Geld, Beförderung oder Dienstwagen geprägt ist. Das zentrale Merkmal der intrinsischen Motivation ist hingegen, dass jemand eine Aufgabe um ihrer selbst willen erfüllt. Betroffene denken bei ihrem Tun selten in erster Linie an materiellen Gewinn. Wichtiger ist, dass die Arbeit Spaß macht, Sinn stiftet, inneren Werten und Überzeugungen entspricht.
+      </p>
+      <p> Der Schluss ist naheliegend, dass Vorgesetzte sich in ihrem Verantwortungsbereich intrinsische Motivation wünschen. Der Schlüssel zu einer umfassenden Sicht auf die Führungsaufgabe Motivation ist aber, extrinsische und intrinsische nicht als Pole einer Dimension zu verstehen, sondern als zwei Dimensionen. Für eine zufriedene Person sind intrinsische und extrinsische Faktoren berücksichtigt. Fehlen extrinsischen Faktoren wie angemessene Arbeitsbedingungen, kann z.B. eine idealistische Einstellung trotzdem zu hoher Arbeitsleistung führen. Dann ist die Gefahr aber groß, dass eine Enttäuschung nicht durch andere Aspekte aufgefangen wird. Der Mitarbeiter resigniert. Im anderen Extremfall sieht eine Person keinen Sinn in ihrer Arbeit, aber beeindruckend hohe Gehaltseingänge auf ihrem Konto. Das Geld kann jedoch die vom Vorgesetzten erwünschte Leistung nicht mehr provozieren. 
+      </p>
+      <p> Eine Führungskraft kann mit dieser Übersicht gezielt erfragen, was wen motiviert und gezielter nachsteuern. Schon das ehrliche Interesse des Vorgesetzten hilft häufig weiter: Wahrgenommen zu werden ist eine bedeutende Einflussgröße auf die intrinsische Motivation.
+        </p>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        LITERATUR
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p><b>Über andere Aspekte von Motivation: Rainer Niermeyer:</b><br> Motivation. Instrumente zur Förderung und Verführung</p>
+
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>QUERVERWEISE</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wo finde ich mehr zur Herleitung? Wie kann es weiter gehen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+ 
+      
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-senderuempfaenger']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Sender & Empfänger</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-reifegradmodell']">
+    <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Reifegradmodell nach Hersey und Blanchard</div>
+        </ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-lobukritik']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Lob & Kritik</div>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>
+<ion-content *ngIf="getCurrentLang()=='en'" [ngClass]="{'offline' :textDefault=='notset'}">
+  <img src="/assets/img/karte-motivation.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>Ziel</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was kann ich mit diesem Modell erreichen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Sie helfen Ihren Mitarbeitern sich gezielt und anhaltend für Ziele und zum Handeln zu motivieren. Dadurch erhöhen auch Sie als Führungskraft Ihren beruflichen Erfolg.
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was ist die Ausgangslage?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      Führungskräfte möchten Mitarbeiter gezielt beeinflussen, sodass diese ihre Aufgaben sachgerecht erfüllen. Aber was motiviert? Und auf welche Weise?
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>LÖSUNGSANSATZ</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wie komme ich von der Ausgangslage zum Ziel?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+     
+      <p> Motivation wird mit der Unterscheidung von extrinsischen und intrinsischen Faktoren für eine Führungskraft handhabbarer. Extrinsisch ist dabei eine Motivation, die von der Aussicht auf konkrete Vorteile wie Geld, Beförderung oder Dienstwagen geprägt ist. Das zentrale Merkmal der intrinsischen Motivation ist hingegen, dass jemand eine Aufgabe um ihrer selbst willen erfüllt. Betroffene denken bei ihrem Tun selten in erster Linie an materiellen Gewinn. Wichtiger ist, dass die Arbeit Spaß macht, Sinn stiftet, inneren Werten und Überzeugungen entspricht.
+      </p>
+      <p> Der Schluss ist naheliegend, dass Vorgesetzte sich in ihrem Verantwortungsbereich intrinsische Motivation wünschen. Der Schlüssel zu einer umfassenden Sicht auf die Führungsaufgabe Motivation ist aber, extrinsische und intrinsische nicht als Pole einer Dimension zu verstehen, sondern als zwei Dimensionen. Für eine zufriedene Person sind intrinsische und extrinsische Faktoren berücksichtigt. Fehlen extrinsischen Faktoren wie angemessene Arbeitsbedingungen, kann z.B. eine idealistische Einstellung trotzdem zu hoher Arbeitsleistung führen. Dann ist die Gefahr aber groß, dass eine Enttäuschung nicht durch andere Aspekte aufgefangen wird. Der Mitarbeiter resigniert. Im anderen Extremfall sieht eine Person keinen Sinn in ihrer Arbeit, aber beeindruckend hohe Gehaltseingänge auf ihrem Konto. Das Geld kann jedoch die vom Vorgesetzten erwünschte Leistung nicht mehr provozieren. 
+      </p>
+      <p> Eine Führungskraft kann mit dieser Übersicht gezielt erfragen, was wen motiviert und gezielter nachsteuern. Schon das ehrliche Interesse des Vorgesetzten hilft häufig weiter: Wahrgenommen zu werden ist eine bedeutende Einflussgröße auf die intrinsische Motivation.
+        </p>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        LITERATUR
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p><b>Über andere Aspekte von Motivation: Rainer Niermeyer: .</b><br> Motivation. Instrumente zur Förderung und Verführung</p>
+
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>QUERVERWEISE</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wo finde ich mehr zur Herleitung? Wie kann es weiter gehen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+ 
+      
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-senderuempfaenger']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Sender & Empfänger</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-reifegradmodell']">
+    <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Reifegradmodell nach Hersey und Blanchard</div>
+        </ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-lobukritik']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Lob & Kritik</div>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/home']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/cards']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="logo-buffer"></ion-icon>
+      </ion-button>
+      <ion-button [routerDirection]="'root'" [routerLink]="['/barcode']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="barcode"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

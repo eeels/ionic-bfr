@@ -1,0 +1,310 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="getCurrentLang()=='de'">Empfehlungsdreieck</ion-title>
+    <ion-title *ngIf="getCurrentLang()=='en'">Empfehlungsdreieck</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-row *ngIf="textDefault=='notset'" class="ion-padding-vertical" id="notActive"
+  class="ion-text-center ion-align-items-end ion-justify-content-center ion-padding">
+  <div class="content">
+    <h2>{{ 'needto_activate' | translate }}</h2>
+    <ion-button color="primary" [routerDirection]="'root'" [routerLink]="['/barcode']">
+      <ion-icon name="barcode" style="display: inline-block; margin-right: 0.5em;"></ion-icon>
+      {{ 'menu.activate_pages' | translate }}
+    </ion-button>
+  </div>
+</ion-row>
+<ion-content *ngIf="getCurrentLang()=='de'" [ngClass]="{'offline' :textDefault=='notset'}">
+
+  <img src="/assets/img/karte-empfehlungsdreieck.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>Ziel</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was kann ich mit diesem Modell erreichen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p> Sie gewinnen neue Kunden, indem sie qualifiziert von Dritten empfohlen werden. Die Qualifizierunontent</p>
+      <p> Sie gewinnen neue Kunden, indem sie qualifiziert von Dritten empfohlen werden. Die Qualifizierung erhöht die Wahrscheinlichkeit enorm, dass Ihr potenzieller Kunde der Empfehlung auch folgt und zum Neukunden wird.</p>
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was ist die Ausgangslage?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      <p>Kunden zu gewinnen ist aufwändig. Zwar gelten Empfehlungen als Abkürzung zu neuen Kunden und zu neuem Umsatz. Aber die meisten Empfehlungen werden so schnell vergessen wie sie gehört wurden.
+        </p>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>LÖSUNGSANSATZ</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wie komme ich von der Ausgangslage zum Ziel?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <p>Warum vergessen die meisten Menschen Empfehlungen, statt ihnen zu folgen? Ein wichtiger Grund ist, dass der potenzielle neue Kunde, die Zielperson, den Mehrwert der Empfehlung nicht in seiner eigenen Welt verortet: Er weiß nicht, warum er sich den Tipp merken soll. Es macht für ihn keinen Unterschied. Es ist ihm egal.
+      </p>  <p> Diese Lücke kann derjenige schließen, der die Empfehlung ausspricht, in den meisten Fällen ein Bestandskunde. Er allein kann der Zielperson sagen, warum ein Anbieter für sie interessant sein könnte. Dabei begründet er die Empfehlung im Idealfall nicht nur allgemein („Das sind gute Fortbildungen“), sondern veranschaulicht den Nutzen des angestrebten Kontakts möglichst konkret („Der Anbieter ist genau auf Deine Herausforderungen spezialisiert“).
+        </p>  <p>So wird aus der Empfehlung (Werbung) ein Gefallen des Empfehlenden an die Zielperson und aus einer beiläufigen Geschichte eine Hilfestellung. So profitieren alle Parteien des unten dargestellten Dreiecks.
+           </p>  <p> Auf die Idee einer qualifizierten Empfehlung kommen nur die wenigsten Kunden allein. Aber diesen Gedanken kann der Anbieter anstoßen:
+          </p><ol> <li>>Der Anbieter identifiziert eine Zielperson, vielleicht aus dem Netzwerk des Kunden. Er kann auch allgemein fragen, für wen die Leistung ebenfalls gewinnbringend sein könnte.
+          </li>   <li>	Es geht neben dem Wem auch immer um das Warum! Der Anbieter bittet also den Kunden explizit darum, der Zielperson das Warum transparent zu machen.
+          </li>   <li>	Jetzt gilt es als Anbieter, mit Nachfragen und Erinnerungen weiter nah am Geschehen zu bleiben. Denn er ist kurz davor, einen neuen Kunden zu gewinnen! </li>
+        
+          </ol>
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        LITERATUR
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <p><b> Klaus-J. Fink:  </b><br> Empfehlungsmarketing: Königsweg der Neukundengewinnung</p>
+    
+     
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>QUERVERWEISE</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wo finde ich mehr zur Herleitung? Wie kann es weiter gehen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-kundenzyklus']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">  Kundenzyklus
+          </div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-beschwerdemanagement']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">  Beschwerdemanagement
+          </div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-merkmalvorteilnutzen']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Merkmal – Vorteil – Nutzen 
+          </div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-netzwerken']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Netzwerken
+          </div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-interessenupositionen']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Interessen & Positionen     </div>
+        </ion-label>
+      </ion-item>
+      
+     </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>
+<ion-content *ngIf="getCurrentLang()=='en'" [ngClass]="{'offline' :textDefault=='notset'}">
+  <img src="/assets/img/karte-empfehlungsdreieck.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>Ziel</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was kann ich mit diesem Modell erreichen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p> Sie gewinnen neue Kunden, indem sie qualifiziert von Dritten empfohlen werden. Die Qualifizierung erhöht die Wahrscheinlichkeit enorm, dass Ihr potenzieller Kunde der Empfehlung auch folgt und zum Neukunden wird</p>
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was ist die Ausgangslage?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      <p>Kunden zu gewinnen ist aufwändig. Zwar gelten Empfehlungen als Abkürzung zu neuen Kunden und zu neuem Umsatz. Aber die meisten Empfehlungen werden so schnell vergessen wie sie gehört wurden.
+        </p>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>LÖSUNGSANSATZ</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wie komme ich von der Ausgangslage zum Ziel?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <p>Warum vergessen die meisten Menschen Empfehlungen, statt ihnen zu folgen? Ein wichtiger Grund ist, dass der potenzielle neue Kunde, die Zielperson, den Mehrwert der Empfehlung nicht in seiner eigenen Welt verortet: Er weiß nicht, warum er sich den Tipp merken soll. Es macht für ihn keinen Unterschied. Es ist ihm egal.
+      </p>  <p> Diese Lücke kann derjenige schließen, der die Empfehlung ausspricht, in den meisten Fällen ein Bestandskunde. Er allein kann der Zielperson sagen, warum ein Anbieter für sie interessant sein könnte. Dabei begründet er die Empfehlung im Idealfall nicht nur allgemein („Das sind gute Fortbildungen“), sondern veranschaulicht den Nutzen des angestrebten Kontakts möglichst konkret („Der Anbieter ist genau auf Deine Herausforderungen spezialisiert“).
+        </p>  <p>So wird aus der Empfehlung (Werbung) ein Gefallen des Empfehlenden an die Zielperson und aus einer beiläufigen Geschichte eine Hilfestellung. So profitieren alle Parteien des unten dargestellten Dreiecks.
+           </p>  <p> Auf die Idee einer qualifizierten Empfehlung kommen nur die wenigsten Kunden allein. Aber diesen Gedanken kann der Anbieter anstoßen:
+          </p><ol> <li>>Der Anbieter identifiziert eine Zielperson, vielleicht aus dem Netzwerk des Kunden. Er kann auch allgemein fragen, für wen die Leistung ebenfalls gewinnbringend sein könnte.
+          </li>   <li>	Es geht neben dem Wem auch immer um das Warum! Der Anbieter bittet also den Kunden explizit darum, der Zielperson das Warum transparent zu machen.
+          </li>   <li>	Jetzt gilt es als Anbieter, mit Nachfragen und Erinnerungen weiter nah am Geschehen zu bleiben. Denn er ist kurz davor, einen neuen Kunden zu gewinnen! </li>
+        
+          </ol>
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        LITERATUR
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <p><b> Klaus-J. Fink:  </b><br> Empfehlungsmarketing: Königsweg der Neukundengewinnung</p>
+    
+     
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>QUERVERWEISE</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wo finde ich mehr zur Herleitung? Wie kann es weiter gehen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-kundenzyklus']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">  Kundenzyklus
+          </div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-beschwerdemanagement']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">  Beschwerdemanagement
+          </div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-merkmalvorteilnutzen']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Merkmal – Vorteil – Nutzen 
+          </div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-netzwerken']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Netzwerken
+          </div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-interessenupositionen']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Interessen & Positionen     </div>
+        </ion-label>
+      </ion-item>
+      
+     </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button [routerDirection]="'root'" [routerLink]="['/home']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+      <ion-button [routerDirection]="'root'" [routerLink]="['/cards']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="logo-buffer"></ion-icon>
+      </ion-button>
+      <ion-button [routerDirection]="'root'" [routerLink]="['/barcode']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="barcode"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

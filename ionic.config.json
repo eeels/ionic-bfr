@@ -1,0 +1,8 @@
+{
+  "name": "ionic-angular-accordion",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "0ae452db"
+}

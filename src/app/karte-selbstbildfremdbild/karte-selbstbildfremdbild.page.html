@@ -1,0 +1,288 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="getCurrentLang()=='de'">Selbstbild und Fremdbild nach Johari</ion-title>
+    <ion-title *ngIf="getCurrentLang()=='en'">Selbstbild und Fremdbild nach Johari</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-row *ngIf="textDefault=='notset'" class="ion-padding-vertical" id="notActive"  class="ion-text-center ion-align-items-end ion-justify-content-center ion-padding">
+  <div class="content">
+    <h2>{{ 'needto_activate' | translate }}</h2>
+    <ion-button color="primary" [routerDirection]="'root'" [routerLink]="['/barcode']">
+      <ion-icon name="barcode" style="display: inline-block; margin-right: 0.5em;"></ion-icon>
+      {{ 'menu.activate_pages' | translate }}
+    </ion-button>
+  </div>
+</ion-row>
+<ion-content *ngIf="getCurrentLang()=='de'" [ngClass]="{'offline' :textDefault=='notset'}">
+
+  <img src="/assets/img/karte-selbstbildfremdbild.png" /> 
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>Ziel</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was kann ich mit diesem Modell erreichen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Sie können sich selbst immer besser einschätzen und Einschätzungen Ihrer Person durch andere einordnen. Dadurch können Sie gezielter an sich arbeiten und insbesondere in sozialen Situationen überlegter reagieren.
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was ist die Ausgangslage?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      Im Alltag denken nur wenige Menschen gezielt über sich nach. Zumeist rufen auch extreme Rückmeldungen anderer eher reflexartige denn überlegte Reaktionen hervor. Dabei wird das Potential verschenkt, das gelegentliche Selbstreflexion in sich birgt.
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>LÖSUNGSANSATZ</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wie komme ich von der Ausgangslage zum Ziel?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+
+      <p>Das nach den Gründern Joseph Luft und Harry Ingham benannte Johari-Fenster zeigt bewusste und unbewusste Persönlichkeits- und Verhaltensmerkmale zwischen einem selbst und anderen. Die Kreise stehen für Selbst- und Fremdbild. Dabei sind die Kreise und Schnittflächen in Ihrer Größe unterschiedlich und variabel. Die vier Felder strukturieren diese Selbstreflexion: 
+      </p>
+      <ol><li>	Zur öffentlichen Person gehören äußere Merkmale (z.B. Auftreten, körperliche Reaktionen), nach außen sichtbare, persönliche Eigenschaften (z.B. Selbstsicherheit, Gewissenhaftigkeit) und innere Haltungen und Einstellungen (z.B. Religiosität, Moral).
+      </li><li>  	Die private Person birgt nicht nur bewusste Geheimnisse. In dieses Feld gehört auch alles, was ich von mir weiß, aber anderen unwissentlich nicht zugänglich mache.
+      </li><li>Der blinde Fleck umfasst alles, was andere wahrnehmen und mir selbst unbewusst ist. Die Grundidee ist hier durch Rückmeldung zu lernen, also Informationen von diesem Feld zur öffentlichen Person zu verschieben.
+      </li><li>	Das Unbekannte zeigt, dass mehr wahr sein kann und möglich ist, als sich auch in den größten Gruppen wahrnehmen lässt. Dies wird manchmal als größtes Feld angesehen. 
+      </li></ol> <p>  Keines dieser Felder ist ohne Rückmeldung fundiert auszufüllen. Daher gilt es, Rückmeldungen zu suchen, wo immer diese verfügbar ist und diese in ruhigen Stunden auszuwerten.
+    
+      </p>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        LITERATUR
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p><b>Christoph Brechtel: </b><br> Wer wir sind und wie andere uns sehen: Eine psychologische Anleitung zur Menschenkenntnis</p>
+      
+      <p><b>Joseph Luft, Harry Ingham: </b> <br>Johari Window. The Model.  <a href="http://richerexperiences.com/wp-content/uploads/2014/02/Johari-Window.pdf"     target="_blank">http://richerexperiences.com/wp-content/uploads/2014/02/Johari-Window.pdf</a></p>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>QUERVERWEISE</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wo finde ich mehr zur Herleitung? Wie kann es weiter gehen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-senderuempfaenger']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Sender & Empfänger
+           
+          
+            </div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-lobukritik']">
+     <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Lob & Kritik</div>
+        </ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-planung']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">   Planung</div>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>
+<ion-content *ngIf="getCurrentLang()=='en'" [ngClass]="{'offline' :textDefault=='notset'}">
+
+  <img src="/assets/img/karte-selbstbildfremdbild.png" /> 
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>Ziel</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was kann ich mit diesem Modell erreichen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Sie können sich selbst immer besser einschätzen und Einschätzungen Ihrer Person durch andere einordnen. Dadurch können Sie gezielter an sich arbeiten und insbesondere in sozialen Situationen überlegter reagieren.
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was ist die Ausgangslage?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      Im Alltag denken nur wenige Menschen gezielt über sich nach. Zumeist rufen auch extreme Rückmeldungen anderer eher reflexartige denn überlegte Reaktionen hervor. Dabei wird das Potential verschenkt, das gelegentliche Selbstreflexion in sich birgt.
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>LÖSUNGSANSATZ</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wie komme ich von der Ausgangslage zum Ziel?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+
+      <p>Das nach den Gründern Joseph Luft und Harry Ingham benannte Johari-Fenster zeigt bewusste und unbewusste Persönlichkeits- und Verhaltensmerkmale zwischen einem selbst und anderen. Die Kreise stehen für Selbst- und Fremdbild. Dabei sind die Kreise und Schnittflächen in Ihrer Größe unterschiedlich und variabel. Die vier Felder strukturieren diese Selbstreflexion: 
+      </p>
+      <ul><li>	Zur öffentlichen Person gehören äußere Merkmale (z.B. Auftreten, körperliche Reaktionen), nach außen sichtbare, persönliche Eigenschaften (z.B. Selbstsicherheit, Gewissenhaftigkeit) und innere Haltungen und Einstellungen (z.B. Religiosität, Moral).
+      </li><li>  	Die private Person birgt nicht nur bewusste Geheimnisse. In dieses Feld gehört auch alles, was ich von mir weiß, aber anderen unwissentlich nicht zugänglich mache.
+      </li><li>Der blinde Fleck umfasst alles, was andere wahrnehmen und mir selbst unbewusst ist. Die Grundidee ist hier durch Rückmeldung zu lernen, also Informationen von diesem Feld zur öffentlichen Person zu verschieben.
+      </li><li>	Das Unbekannte zeigt, dass mehr wahr sein kann und möglich ist, als sich auch in den größten Gruppen wahrnehmen lässt. Dies wird manchmal als größtes Feld angesehen. 
+      </li> </ul> <p>  Keines dieser Felder ist ohne Rückmeldung fundiert auszufüllen. Daher gilt es, Rückmeldungen zu suchen, wo immer diese verfügbar ist und diese in ruhigen Stunden auszuwerten.
+    
+      </p>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        LITERATUR
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p><b>Christoph Brechtel: </b><br> Wer wir sind und wie andere uns sehen: Eine psychologische Anleitung zur Menschenkenntnis</p>
+      
+      <p><b>Joseph Luft, Harry Ingham: </b> <br>Johari Window. The Model.  <a href="http://richerexperiences.com/wp-content/uploads/2014/02/Johari-Window.pdf"     target="_blank">http://richerexperiences.com/wp-content/uploads/2014/02/Johari-Window.pdf</a></p>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>QUERVERWEISE</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wo finde ich mehr zur Herleitung? Wie kann es weiter gehen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-senderuempfaenger']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Sender & Empfänger
+           
+          
+            </div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-lobukritik']">
+     <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Lob & Kritik</div>
+        </ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-planung']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">   Planung</div>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/home']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/cards']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="logo-buffer"></ion-icon>
+      </ion-button>
+      <ion-button [routerDirection]="'root'" [routerLink]="['/barcode']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="barcode"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

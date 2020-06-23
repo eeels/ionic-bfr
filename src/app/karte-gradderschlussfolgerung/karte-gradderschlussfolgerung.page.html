@@ -1,0 +1,288 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="getCurrentLang()=='de'">Grad der Schlussfolgerung</ion-title>
+    <ion-title *ngIf="getCurrentLang()=='en'">Degree of Conclusion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-row *ngIf="textDefault=='notset'" class="ion-padding-vertical" id="notActive"  class="ion-text-center ion-align-items-end ion-justify-content-center ion-padding">
+  <div class="content">
+    <h2>{{ 'needto_activate' | translate }}</h2>
+    <ion-button color="primary" [routerDirection]="'root'" [routerLink]="['/barcode']">
+      <ion-icon name="barcode" style="display: inline-block; margin-right: 0.5em;"></ion-icon>
+      {{ 'menu.activate_pages' | translate }}
+    </ion-button>
+  </div>
+</ion-row>
+<ion-content *ngIf="getCurrentLang()=='de'" [ngClass]="{'offline' :textDefault=='notset'}">
+
+  <img src="/assets/img/karte-gradderschlussfolgerung.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>Ziel</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was kann ich mit diesem Modell erreichen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Sie können die innere Logik eines Arguments fundiert einschätzen. In manchen Fällen können Sie ein Argument rein methodisch angreifen, ohne Sachkenntnis einzusetzen.
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was ist die Ausgangslage?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      Die Fakten sind unumstößlich oder zumindest sehr plausibel. Dennoch erscheint ein Argument nicht stimmig. Oder es soll aus anderen Gründen (z.B. im Rahmen einer Analyse) geprüft werden. Aber wie deckt man auf systematische Weise Fehler einer Argumentation auf?
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>LÖSUNGSANSATZ</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wie komme ich von der Ausgangslage zum Ziel?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <p> Ein Argument besteht aus mindestens einer Prämisse und einer Konklusion. Der Grad der Schlussfolgerung misst die Kraft der logischen Verbindung zwischen beiden: Wenn die Prämisse stimmt („Es regnet.“), wie wahrscheinlich ist dann die Konklusion („Du solltest einen Schirm mitnehmen.“)?
+      </p>  <p> Bei einem logischen Beweis gibt es keinen inhärenten Logikfehler. Meistens sind das banale Argumente, 
+        z.B., wenn aus der Tatsache, dass es stark regnet, gefolgert wird, dass es draußen nass ist. Wenn alle logischen Möglichkeiten in einem Kreis dargestellt sind, füllt dieses Argument den Kreis vollständig aus und umfasst alle denkbaren Fälle. Als Angriffsfläche bleibt dann lediglich die Relevanz des Arguments für das Streitthema: „Viel wichtiger ist doch …“. Für diese Form des Angriffs braucht es Fachkenntnis.
+      </p>  <p> Das andere Extrem auf der Liste der Schlussfolgerungsgrade bildet der Fehlschluss. Die Schlussfolgerung 
+        folgt in keinem denkbaren Fall aus den Prämissen, wenn z. B. Regen als Grund für ein schlechtes TV-Programm herhalten muss. Um dieses Argument anzugreifen, braucht es kaum Fachkenntnis: Man muss weder das Wetter kennen noch aktuelle Fernsehsendungen.
+      </p>  <p>  Zwischen diesen beiden Graden füllt bzw. leert sich der Kreis stufenlos, gleichzeitig nimmt die Notwendigkeit von Fachwissen für den Angriff zu bzw. ab. Zur Orientierung seien zwei Beispiele herausgegriffen. Erstens: Im Alltag ist eine wahrscheinliche Schlussfolgerung als gutes Argument anzusehen („Du solltest einen Schirm mitnehmen“). Es umfasst nicht alle logischen Fälle, aber die Liste der Gegenbeispiele ist kurz, die Lücke im Kreis aller denkbaren Fälle klein. Zweitens: Auch bei einem kaum gefüllten Kreis („… deshalb wird es ein guter Jahrgang für den Riesling“) muss das Argument nicht haltlos sein. Aber es fehlen zumindest entscheidende weitere Prämissen.
+        </p>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        LITERATUR
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p><b>Mark Zegarelli:</b><br>  Logik für Dummies</p>
+
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>QUERVERWEISE</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wo finde ich mehr zur Herleitung? Wie kann es weiter gehen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-argument']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Argument</div>
+        </ion-label>
+      </ion-item>
+
+           <ion-item [routerDirection]="'root'" [routerLink]="['/karte-argumentation']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Argumentation</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-lokikinargument']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+          <ion-label>
+            <div class="item"> Logik in Argument und Argumentation</div>
+          </ion-label>
+        </ion-item>
+      
+      
+    </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>
+<ion-content *ngIf="getCurrentLang()=='en'" [ngClass]="{'offline' :textDefault=='notset'}">
+  <img src="/assets/img/karte-degree.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>GOAL</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        What can I achieve with this model?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      You can properly evaluate the inner logic of an argument. In some cases, you can attack an argument purely methodologically, without using any special knowledge.
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        What is the situation?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      The facts are incontrovertible or at least very plausible. Nevertheless, an argument does not seem coherent. Or it ought to be tested for other reasons (e.g. in the context of an analysis). But how are errors detected methodologically?
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>SOLUTION</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        How do I achieve my goals?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+   
+      <p>An argument consists of at least one premise and a conclusion. The degree of conclusion measures the strength of the logical connection between the two. If the premise is true (“it is raining”), how likely is the conclusion (“you should take an umbrella”)?
+      </p>
+      <p> In a logical conclusion, there is no inherent logical error. Most such arguments are banal, for example when the fact that it is raining hard leads to the conclusion that it is wet outside. When all the logical possibilities are portrayed in a circle, the argument fills out the whole circle and covers all possible cases. The only possible remaining objection is relevance: “But much more important is …” Objections of this kind require special knowledge.
+      </p>
+      <p> Occupying the other extreme on the spectrum of degrees of conclusion is the false conclusion. Such a conclusion follows in no conceivable way from the premises – for example, when rain is cited as the cause 
+        for a bad television program. To attack this argument, special knowledge is barely necessary: you do 
+        not need to know the weather or be familiar with current television programs.
+      </p>
+      <p> Between these two degrees, as the circle is filled in or emptied out, the amount of special knowledge necessary for an objection increases or decreases accordingly. Two examples will provide some orientation. First, in everyday life a plausible conclusion is considered a good argument (“you should take an umbrella”). 
+        It does not cover all logical possibilities, but the list of counter-examples is short and the gap in the circle 
+        of all conceivable cases small. Second, even a barely filled circle (“… therefore it will be a good year for Riesling”) does not mean the argument is necessarily untenable. But at the very least, further crucial premises are missing.
+         </p>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>FURTHER READING</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+      Where can I find more about derivation? How can it go on?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+     <p><b>Kirsten DeVries: </b><br> Argument <a          href="https://vwcceng111.pressbooks.com/chapter/chapter-3-argument/#whatislogic"          target="_blank">https://vwcceng111.pressbooks.com/chapter/chapter-3-argument/#whatislogic</a></p>
+     <p><b>Johnie H. Scott: </b><br> The Principles of Argumentation  <a          href="https://www.csun.edu/~hcpas003/argument.html"          target="_blank">https://www.csun.edu/~hcpas003/argument.html</a></p>
+    
+      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>CROSS-REFERENCES</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+       Where can I get more background information?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-argument']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Argument</div>
+        </ion-label>
+      </ion-item>
+
+           <ion-item [routerDirection]="'root'" [routerLink]="['/karte-argumentation']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Argumentation</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-lokikinargument']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+          <ion-label>
+            <div class="item"> Logic of Argument and Argumentation </div> 
+          </ion-label>
+        </ion-item>
+      
+      
+    </ion-card-content> 
+  </ion-card>
+
+
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/home']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/cards']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="logo-buffer"></ion-icon>
+      </ion-button>
+      <ion-button [routerDirection]="'root'" [routerLink]="['/barcode']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="barcode"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

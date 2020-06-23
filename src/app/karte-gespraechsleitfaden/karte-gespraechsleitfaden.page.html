@@ -1,0 +1,306 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="getCurrentLang()=='de'">Gesprächsleitfaden</ion-title>
+    <ion-title *ngIf="getCurrentLang()=='en'">Conversation Guide</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-row *ngIf="textDefault=='notset'" class="ion-padding-vertical" id="notActive"  class="ion-text-center ion-align-items-end ion-justify-content-center ion-padding">
+  <div class="content">
+    <h2>{{ 'needto_activate' | translate }}</h2>
+    <ion-button color="primary" [routerDirection]="'root'" [routerLink]="['/barcode']">
+      <ion-icon name="barcode" style="display: inline-block; margin-right: 0.5em;"></ion-icon>
+      {{ 'menu.activate_pages' | translate }}
+    </ion-button>
+  </div>
+</ion-row>
+<ion-content *ngIf="getCurrentLang()=='de'" [ngClass]="{'offline' :textDefault=='notset'}">
+
+  <img src="/assets/img/karte-gespraechsleitfaden.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>Ziel</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was kann ich mit diesem Modell erreichen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Sie führen Gespräche im doppelten Sinne des Wortes – unabhängig davon, ob Sie die formal zur Gesprächsleitung bestimmte Person, wie z.B. der Vorgesetzte, sind, oder das Gegenüber.
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was ist die Ausgangslage?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      Gespräche entfalten ihre eigene Dynamik. Dabei den Überblick zu behalten, ist schwierig. In der Situation selbst oder mit Abstand haben Gesprächspartner dann den Eindruck, nicht effizient gewesen zu sein, vielleicht chaotisch, etwas vergessen zu haben oder sogar überrumpelt worden zu sein.
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>LÖSUNGSANSATZ</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wie komme ich von der Ausgangslage zum Ziel?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <p> Ein grundsätzlicher Spannungsbogen zwischen der Beziehungs- und Sachebene hilft, die Inhalte eines Gesprächs zu sortieren. Beide Ebenen sind in der Reinform schwer vorstellbar. Zwar dominiert im Zweifel die Beziehung über den Inhalt. Aber das Ziel eines sachlichen Gesprächs ist die bestmögliche Konzentration auf den Inhalt. Gleichzeitig sind Abmachungen nachhaltiger, wenn sie auch im Gefühl verankert sind. Das kann in folgenden sechs Schritten gelingen.
+      </p> <ol><li>	Die Begrüßung ist reine Beziehungsarbeit. Zwei Fragen kann jeder für sich zu beantworten versuchen: Wer ist der Andere (Visitenkarte)? Wie geht es ihm (entspannt, gehetzt, konzentriert, …)?
+      </li><li> 	Hier prüfen beide Seiten, ob sie zu diesem Thema intensiver sprechen möchten. Vielleicht lässt sich das Ziel des Gesprächs benennen. Vor weiteren Schritten gilt es folgende Fragen bejahen zu können: Hatten beide Seiten eine Chance, dem Gespräch eine Überschrift zu geben?
+      </li><li> 	In den meisten Fällen wird das Ermitteln der Details die meiste Zeit in Anspruch nehmen. Hier lautet die Kontrollfrage: Sind alle Aspekte besprochen, die bei einer Lösung helfen können und bedacht sein sollten?
+      </li><li> 	Wenn es gelingt, die Detailermittlung von der Arbeit an Lösungen zu trennen, wird eine Einigung leichter. Mit Zahl und Qualität der Wahlmöglichkeiten steigen die Chancen, auch die beste Idee zu finden. Zudem steht mehr Material zum Kombinieren zur Verfügung. Daher die Frage: Liegen alle Optionen auf dem Tisch?
+      </li><li> 	Bis hierhin ist nichts entschieden! Das ist wichtig, um offene Gedanken zu fördern. Jetzt kommt zum Kopf wieder mehr Bauch: Ist diese Entscheidung in beiderlei Interesse? Und fühlt sich das auch so an?
+      </li><li>  	Die Verabschiedung spiegelt die Begrüßung. Wie geht es meinem Gegenüber jetzt?
+      </li>  </ol>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        LITERATUR
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <p><b>Wolfgang Mentzel:</b><br> Kommunikation. Rede, Präsentation, Gespräch, Verhandlung, Moderation</p>
+        <p><b> Anja von Kanitz:</b><br> Gesprächsführung: Taschen Guide</p>
+      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>QUERVERWEISE</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wo finde ich mehr zur Herleitung? Wie kann es weiter gehen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-moeglichkeitsraum']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Möglichkeitsraum in einem Gespräch</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-senderuempfaenger']">
+<ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">
+      Sender & Empfänger</div>
+    </ion-label>
+  </ion-item>
+  <ion-item [routerDirection]="'root'" [routerLink]="['/karte-interessenupositionen']">
+<ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+    <ion-label>
+      <div class="item">
+      Interessen & Positionen</div>
+    </ion-label>
+  </ion-item>
+  <ion-item [routerDirection]="'root'" [routerLink]="['/karte-konfliktbewaeltigung']">
+<ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+    <ion-label>
+      <div class="item">
+      Konfliktbewältigung </div>
+    </ion-label>
+  </ion-item>
+
+      
+    </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>
+<ion-content *ngIf="getCurrentLang()=='en'" [ngClass]="{'offline' :textDefault=='notset'}">
+  <img src="/assets/img/karte-conversation.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>GOAL</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        What can I achieve with this model?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      You will take charge of conversations, regardless of whether you are the one who has called the meeting 
+      (e.g. as a supervisor) or the one who has been invited to it.
+      
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        What is the situation?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Conversations take on their own dynamics, and it can be difficult to maintain an overview of what has been said. Both during and after a conversation, those involved can have the impression that they were inefficient or chaotic. They may wonder if they forgot something or expressed themselves unclearly, and maybe even 
+      feel like they were caught off guard.
+      
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>SOLUTION</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        How do I achieve my goals?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+    
+      <p>Along the arc spanning the factual and relational level, conversations develop a specific structural logic. Neither level exists by itself. The point is to recognize and control what each contributes to communication. The decision whether to engage in a content-related discussion is usually made on the relational level. The factual conversation itself then requires the greatest possible concentration on content. Nevertheless, especially strong agreements are based in some sort of emotional connection as well. They can be reached 
+        in six steps.
+       
+         </p> <ol><li>	The greeting is all about building a relationship. The type of contact initiated should answer two questions: Who is the other person (business card)? How is he doing at the moment (relaxed, stressed, focused, …)?
+        </li><li>	Objectives: Both sides gauge which topic with which goal has priority. It is preferable to state the goal
+        of the meeting. 
+      </li><li>	In most cases, the discussion of details and the identification of essential points occupies the most time. Here the central question is: Have all the points been discussed that could help lead to a solution and 
+        that deserve consideration?
+      </li><li>	It is easier to reach an agreement if the discussion of details is kept separate from the work of finding solutions. The higher the number and quality of choices, the better the likelihood of developing a range
+        of optimal solutions. Hence the question: Are all relevant options on the table?
+      </li><li>	Nothing has been decided yet! Keep this in mind, as it helps ideas flow freely. Now gut feeling becomes 
+        as important as mental deliberation: Is the decision in the interest of both parties? And does it feel right?
+      </li><li>	The farewell is a mirror of the greeting. Question: How is my conversation partner feeling now? And how do I feel about our talk?
+      </li></ol>
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>FURTHER READING</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+      Where can I find more about derivation? How can it go on?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+     <p><b>Principles of mediation: </b><br> <a          href="https://neighborhoodanarchists.org/mediation"          target="_blank">https://neighborhoodanarchists.org/mediation</a></p>
+    
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>CROSS-REFERENCES</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+       Where can I get more background information?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-moeglichkeitsraum']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Scope of Conversation</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-senderuempfaenger']">
+<ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">
+            Sender & Receiver</div>
+    </ion-label>
+  </ion-item>
+  <ion-item [routerDirection]="'root'" [routerLink]="['/karte-interessenupositionen']">
+<ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+    <ion-label>
+      <div class="item">
+        Interests & Positions</div>
+    </ion-label>
+  </ion-item>
+  <ion-item [routerDirection]="'root'" [routerLink]="['/karte-konfliktbewaeltigung']">
+<ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+    <ion-label>
+      <div class="item">
+        Conflict Resolution  </div>
+    </ion-label>
+  </ion-item>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/home']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/cards']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="logo-buffer"></ion-icon>
+      </ion-button>
+      <ion-button [routerDirection]="'root'" [routerLink]="['/barcode']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="barcode"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

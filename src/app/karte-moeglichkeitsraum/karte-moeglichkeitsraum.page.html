@@ -1,0 +1,273 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="getCurrentLang()=='de'">Möglichkeitsraum in einem Gespräch</ion-title>
+    <ion-title *ngIf="getCurrentLang()=='en'">Möglichkeitsraum in einem Gespräch</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-row *ngIf="textDefault=='notset'" class="ion-padding-vertical" id="notActive"  class="ion-text-center ion-align-items-end ion-justify-content-center ion-padding">
+  <div class="content">
+    <h2>{{ 'needto_activate' | translate }}</h2>
+    <ion-button color="primary" [routerDirection]="'root'" [routerLink]="['/barcode']">
+      <ion-icon name="barcode" style="display: inline-block; margin-right: 0.5em;"></ion-icon>
+      {{ 'menu.activate_pages' | translate }}
+    </ion-button>
+  </div>
+</ion-row>
+<ion-content *ngIf="getCurrentLang()=='de'" [ngClass]="{'offline' :textDefault=='notset'}">
+
+  <img src="/assets/img/karte-moeglichkeitsraum.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>Ziel</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was kann ich mit diesem Modell erreichen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Sie wissen, wann es in einem Gespräch sinnvoll ist zu fokussieren, und wann es der Sache dient, dass der Austausch auch weitere Kreise zieht.
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was ist die Ausgangslage?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      In der dynamischen Situation eines Gesprächs fällt es schwer zu entscheiden, wann mehr Ideen weiterhelfen und wann gebündelt werden sollte. Das ist häufig ein Grund für unbefriedigende Gespräche: Sie sind unstrukturiert, dauern lange und Momente der Lösungen verstreichen unbemerkt.
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>LÖSUNGSANSATZ</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wie komme ich von der Ausgangslage zum Ziel?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+   
+      <p> Der Möglichkeitsraum in einem Gespräch wird grundsätzlich von der Begrüßung, wo noch fast alles möglich ist, bis zum Gesprächsziel und -ende immer kleiner.
+      </p>
+      <p> In der Reinform gilt das, wenn Diskutieren und das Entwickeln von neuen Lösungen unerwünscht ist. Es soll allein eine Botschaft vermitteln werden. Dann helfen die Antworten der Gesprächspartner beim Verständnis für die anderen Seiten. An der Botschaft wird das nichts ändern. Das gilt insbesondere in Krisenfällen wie einer Kündigung oder einem Gespräch über Alkoholkonsum mit Auswirkungen auf die Arbeit.
+      </p>
+      <p> In den meisten Fällen ist ein dynamischerer Gesprächsverlauf zu empfehlen. Mit der Definition des Themas (und manchmal auch des offen ausgesprochenen Gesprächsziels) wird der Rahmen sinnvoller Inhalte eingeengt, den die Gesprächspartner im nächsten Schritt erforschen. Sie ermitteln die Details und verschiedenen Sichtweisen auf diese. Wenn es im nächsten Schritt über Lösungen geht, kann es sinnvoll sein, den Spielraum zu erweitern, um kreative Lösungen zu fördern. Die beim Klären des Anliegens definierte Richtung muss dabei immer erhalten bleiben. Dadurch lässt sich der Spielraum im Idealfall zur Zufriedenheit aller auf eine verbindliche Vereinbarung reduzieren – und sich bei der Verabschiedung wieder über Anderes austauschen.
+        </p>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        LITERATUR
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p><b>Andreas Patrzek: </b><br>Systemisches Fragen. Professionelle Fragetechnik für Führungskräfte, Berater und Coaches</p>
+     
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>QUERVERWEISE</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wo finde ich mehr zur Herleitung? Wie kann es weiter gehen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-gespraechsleitfaden']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Gesprächsleitfaden</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-senderuempfaenger']">
+    <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Sender & Empfänger</div>
+        </ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-interessenupositionen']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Interessen und Positionen</div>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>
+<ion-content *ngIf="getCurrentLang()=='en'" [ngClass]="{'offline' :textDefault=='notset'}">
+  <img src="/assets/img/karte-moeglichkeitsraum.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>Ziel</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was kann ich mit diesem Modell erreichen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Sie wissen, wann es in einem Gespräch sinnvoll ist zu fokussieren, und wann es der Sache dient, dass der Austausch auch weitere Kreise zieht.
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was ist die Ausgangslage?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      In der dynamischen Situation eines Gesprächs fällt es schwer zu entscheiden, wann mehr Ideen weiterhelfen und wann gebündelt werden sollte. Das ist häufig ein Grund für unbefriedigende Gespräche: Sie sind unstrukturiert, dauern lange und Momente der Lösungen verstreichen unbemerkt.
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>LÖSUNGSANSATZ</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wie komme ich von der Ausgangslage zum Ziel?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+   
+      <p> Der Möglichkeitsraum in einem Gespräch wird grundsätzlich von der Begrüßung, wo noch fast alles möglich ist, bis zum Gesprächsziel und -ende immer kleiner.
+      </p>
+      <p> In der Reinform gilt das, wenn Diskutieren und das Entwickeln von neuen Lösungen unerwünscht ist. Es soll allein eine Botschaft vermitteln werden. Dann helfen die Antworten der Gesprächspartner beim Verständnis für die anderen Seiten. An der Botschaft wird das nichts ändern. Das gilt insbesondere in Krisenfällen wie einer Kündigung oder einem Gespräch über Alkoholkonsum mit Auswirkungen auf die Arbeit.
+      </p>
+      <p> In den meisten Fällen ist ein dynamischerer Gesprächsverlauf zu empfehlen. Mit der Definition des Themas (und manchmal auch des offen ausgesprochenen Gesprächsziels) wird der Rahmen sinnvoller Inhalte eingeengt, den die Gesprächspartner im nächsten Schritt erforschen. Sie ermitteln die Details und verschiedenen Sichtweisen auf diese. Wenn es im nächsten Schritt über Lösungen geht, kann es sinnvoll sein, den Spielraum zu erweitern, um kreative Lösungen zu fördern. Die beim Klären des Anliegens definierte Richtung muss dabei immer erhalten bleiben. Dadurch lässt sich der Spielraum im Idealfall zur Zufriedenheit aller auf eine verbindliche Vereinbarung reduzieren – und sich bei der Verabschiedung wieder über Anderes austauschen.
+        </p>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        LITERATUR
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p><b>Andreas Patrzek: </b><br>Systemisches Fragen. Professionelle Fragetechnik für Führungskräfte, Berater und Coaches</p>
+     
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>QUERVERWEISE</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wo finde ich mehr zur Herleitung? Wie kann es weiter gehen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-gespraechsleitfaden']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Gesprächsleitfaden</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-senderuempfaenger']">
+    <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Sender & Empfänger</div>
+        </ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-argumentation']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">karte-interessenupositionen</div>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/home']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/cards']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="logo-buffer"></ion-icon>
+      </ion-button>
+      <ion-button [routerDirection]="'root'" [routerLink]="['/barcode']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="barcode"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

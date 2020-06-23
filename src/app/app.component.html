@@ -1,0 +1,83 @@
+ <ion-app>
+   <ion-split-pane>
+     <ion-menu type="overlay" color="primary" Id="content1" (ionWillOpen)="onMenuOpen()">
+       <ion-header>
+         <ion-toolbar>
+           <div class="titleicon ion-padding">
+            <a href="http://b-f-r.com" target="_blank"> <img src="assets/img/logo.svg" /></a>
+           </div>
+         </ion-toolbar>
+       </ion-header>
+       <ion-content *ngIf="getCurrentLang()=='de'">
+         <ion-menu-toggle>
+           <ion-item>
+
+             <ion-select #langSelect (ionChange)='changeLang(langSelect.value)' cancelText="" okText="Ok"
+               class="ion-align-self-end" id="langSelect" slot="end">
+               <ion-select-option value='de' selected>Deutsch</ion-select-option>
+               <ion-select-option value='en'>English</ion-select-option>
+             </ion-select>
+           </ion-item>
+         </ion-menu-toggle>
+         <ion-list no-lines ines=“none”>
+           <ion-menu-toggle>
+             <ion-item [routerDirection]="'root'" [routerLink]="['/home']" (click)="clearLevel()" no-lines ines=“none”
+               mode='md'>
+               <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+               <ion-label>Starteite</ion-label>
+             </ion-item>
+           </ion-menu-toggle>
+         
+           <ion-menu-toggle>
+             <ion-item [routerDirection]="'root'" [routerLink]="['/barcode']" mode='md'>
+              <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+               <ion-label>Karten freischalten</ion-label>
+             </ion-item>
+           </ion-menu-toggle>
+           <ion-menu-toggle>
+            <ion-item [routerDirection]="'root'" [routerLink]="['/imprint']" mode='md'>
+              <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+              <ion-label>Impressum</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+         </ion-list>
+       </ion-content>
+
+       <ion-content *ngIf="getCurrentLang()=='en'">
+         <ion-menu-toggle>
+           <ion-item>
+
+             <ion-select #langSelect (ionChange)='changeLang(langSelect.value)' cancelText="" okText="Ok"
+               class="ion-align-self-end" id="langSelect" slot="end">
+               <ion-select-option value='de'>german</ion-select-option>
+               <ion-select-option value='en' selected>english</ion-select-option>
+             </ion-select>
+           </ion-item>
+         </ion-menu-toggle>
+         <ion-list no-lines ines=“none”>
+           <ion-menu-toggle>
+             <ion-item [routerDirection]="'root'" [routerLink]="['/home']" (click)="clearLevel()" no-lines ines=“none”
+               mode='md'>
+               <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+               <ion-label>Home</ion-label>
+             </ion-item>
+           </ion-menu-toggle>
+          
+           <ion-menu-toggle>
+             <ion-item [routerDirection]="'root'" [routerLink]="['/barcode']" mode='md'>
+              <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+               <ion-label>Unlock cards</ion-label>
+             </ion-item>
+           </ion-menu-toggle>
+           <ion-menu-toggle>
+            <ion-item [routerDirection]="'root'" [routerLink]="['/imprint']" mode='md'>
+              <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+              <ion-label>Imprint</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+         </ion-list>
+       </ion-content>
+     </ion-menu>
+     <ion-router-outlet main></ion-router-outlet>
+   </ion-split-pane>
+ </ion-app>

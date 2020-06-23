@@ -1,0 +1,298 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="getCurrentLang()=='de'">Selbstmanagement nach Eisenhower</ion-title>
+    <ion-title *ngIf="getCurrentLang()=='en'">Selbstmanagement nach Eisenhower</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-row *ngIf="textDefault=='notset'" class="ion-padding-vertical" id="notActive"  class="ion-text-center ion-align-items-end ion-justify-content-center ion-padding">
+  <div class="content">
+    <h2>{{ 'needto_activate' | translate }}</h2>
+    <ion-button color="primary" [routerDirection]="'root'" [routerLink]="['/barcode']">
+      <ion-icon name="barcode" style="display: inline-block; margin-right: 0.5em;"></ion-icon>
+      {{ 'menu.activate_pages' | translate }}
+    </ion-button>
+  </div>
+</ion-row>
+<ion-content *ngIf="getCurrentLang()=='de'" [ngClass]="{'offline' :textDefault=='notset'}">
+
+  <img src="/assets/img/karte-selbstmanagement.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>Ziel</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was kann ich mit diesem Modell erreichen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Sie wissen auch in hektischen Situationen sinnvoll Prioritäten zu setzen und erledigen dadurch Aufgaben in angemessener Zeit und passender Qualität.
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was ist die Ausgangslage?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      Vor lauter dringenden Dingen kommt man nicht zu den wichtigen. Und vom E-Mail-Postfach über den Schreibtisch bis zum Kopf wachsen die Aufgabenberge. Die Übersicht geht verloren.
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>LÖSUNGSANSATZ</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wie komme ich von der Ausgangslage zum Ziel?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+  
+      <p>Dem amerikanischen Präsidenten Dwight D. Eisenhower hat ein ungenannter College-Präsident aus der Seele gesprochen, wie er in einer Rede berichtet: "I have two kinds of problems, the urgent and the important. The urgent are not important, and the important are never urgent."
+      </p>
+      <p> Ein Schlüssel des Selbstmanagements ist die Priorisierung. Und ein Schlüssel der Priorisierung ist die Unterscheidung von Dringend und Wichtig. Daraus lässt sich ein Fenster mit vier Feldern zeichnen. Jede neue Aufgabe wird sofort in eines dieser Felder eingeordnet.
+      </p><ol><li> 	Dringend und wichtig: Diese Aufgaben haben die höchste Priorität. Sie gilt es sofort und selbst zu erledigen. Sind das zu viele Aufgaben, stellt sich die Frage erneut: Was ist wichtiger, was dringender? Typischerweise gehören Weisungen des Chefs mit enger Terminsetzung in dieses Feld.
+      </li><li>	Wichtig, aber nicht dringend: Das sollte man selbst machen, z.B. weil es eine strategische Aufgabe ist. Aber es hat Zeit. Es wird terminiert. Einzige Schwierigkeit: das Feld links oben darf später nicht überlaufen. 
+      </li><li>	Nicht wichtig, aber dringend: Hier muss sich jemand gleich kümmern. Das Telefon klingelt, der Lieferant wartet, die lohnende Skontofrist läuft. Aber das können andere so gut wie man selbst. Oder besser. Also: delegieren, auch wenn die Weisungsbefugnis fehlt, denn häufig reicht eine Bitte.
+      </li><li>	Nicht wichtig und nicht dringend: Der gängige Fehler ist, diese Aufgaben zu terminieren. Hier heißt es schlicht: Ablehnen. Wegwerfen. Löschen.
+      </li></ol>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        LITERATUR
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p><b>Beatris Uhlig:</b><br> Karrierefaktor Zeitmanagement</p>
+      <p><b>  Stephen R. Covey: </b><br> Focus. Achieving your highest priorities. Brilliance Audio</p>
+    
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>QUERVERWEISE</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wo finde ich mehr zur Herleitung? Wie kann es weiter gehen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-planung']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Planung
+            
+         
+            </div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-motivation']">
+       <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Motivation</div>
+        </ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-entscheidungskompetenz']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">    Entscheidungskompetenz </div>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>
+<ion-content *ngIf="getCurrentLang()=='en'" [ngClass]="{'offline' :textDefault=='notset'}">
+
+  <img src="/assets/img/karte-selbstmanagement.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>GOAL</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        What can I achieve with this model?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+   <ol><li> 	You considerably increase the likelihood of convincing others. </li>
+    <li>You structure your thinking logically.  </li>
+      <li>	You enhance mutual intelligibility through clearly structured statements and by giving structure
+    to the unclear statements of others.
+    </li></ol>
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        What is the situation?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      <p> Making arguments is an everyday activity. Yet few people actually know what an argument is – and even 
+        fewer how an argument should be constructed to appeal to their listeners. When two people are talking to one another, especially when they are trying to convince each other, the upshot is often misunderstanding and disappointment.
+        
+      </p>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>SOLUTION</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        How do I achieve my goals?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <p>An argument consists of at least two statements (spoken or only thought) connected by words like “because,” “since,” and “therefore.” The connective word always serves to show how one statement justifies the other.
+      </p>
+      <p> One sentence, the explanation, thus serves as a premise. For example: “I think we’re all tired after four 
+        hours of work.” The premise justifies a second sentence, the conclusion (or statement). For example: “Let’s take a break!”  Or the other way around (first the conclusion, then the premise): “Let’s take a break, since we’ve all got to be tired after four hours of work.”
+        </p>
+      <p>Finally, statements can also be illustrated. Such exemplification seldom plays an essential role in logic. On 
+        the contrary, it is a logically weak premise. But it does have a strength, namely in its ability to communicate information. After a thesis that the listener or reader can understand only with difficulty, and after a justification that makes everything somewhat more intelligible, an illustration helps: it concludes the train 
+        of thought as concretely as possible. In the example given above: “Let’s take a break, since we’ve all got to be tired after four hours of work. I see several yawns.”
+        
+      </p>
+      <p>The sequence of an argument’s three aspects varies according to the circumstance. But when in doubt: 
+        State! Explain! Illustrate!
+        </p>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>FURTHER READING</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+      Where can I find more about derivation? How can it go on?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+     <p><b>Steven L. Johnson: </b><br> Winning Debates.<a
+          href="https://debate.uvm.edu/dcpdf/Steven_Johnson_Winning_Debates_2009.pdf"
+          target="_blank">https://debate.uvm.edu/dcpdf/Steven_Johnson_Winning_Debates_2009.pdf</a></p>
+    
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>CROSS-REFERENCES</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+       Where can I get more background information?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-gradderschlussfolgerung']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Degree of Conclusion</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-lokikinargument']">
+       <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Logic of Argument and Argumentation</div>
+        </ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-argumentation']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Argumentation</div>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/home']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/cards']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="logo-buffer"></ion-icon>
+      </ion-button>
+      <ion-button [routerDirection]="'root'" [routerLink]="['/barcode']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="barcode"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

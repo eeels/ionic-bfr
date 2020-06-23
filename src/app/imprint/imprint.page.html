@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="getCurrentLang()=='de'">Impressum</ion-title>
+    <ion-title *ngIf="getCurrentLang()=='en'">Imprint</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="getCurrentLang()=='de'">
+
+
+  <ion-card>
+    <ion-card-header>
+    
+      <ion-card-title>
+        Impressum
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><b>Blum|Fischer|Rumohr GbR</b><br>
+      Gesellschaft bürgerlichen Rechts<br>
+      Gesellschafter: Christian Blum, Frederik von Rumohr</p>
+      
+      <p>  Linienstr. 134 10115 Berlin<br>
+      Tel.:<a href="tel:004930688374350">030 - 688 37 43 5 - 0</a><br>
+      Fax: 030 - 688 37 43 5 - 1<br>
+      E-Mail:<a href="mailto:info@b-f-r.com">info@b-f-r.com</a></p>
+      
+      <p> USt-IdNr.: DE236778078<br>
+      Finanzamt Mitte/Tiergarten</p>
+      
+      
+      <p> Haftungshinweis: Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
+      
+      <p> Inhaltlich verantwortlich gemäß §6 MDStV: Christian Blum</p>
+      
+      <p>  © 2018, Blum|Fischer|Rumohr GbR<br>
+      Alle Rechte vorbehalten. Insbesondere dürfen Nachdruck, das Kopieren von Inhalten sowie die Vervielfältigung auf Datenträger nur nach vorheriger schriftlicher Zustimmung erfolgen.</p>
+    </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>
+
+<ion-content *ngIf="getCurrentLang()=='en'">
+  <ion-card>
+    <ion-card-header>
+    
+      <ion-card-title>
+        Imprint
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><b>Blum|Fischer|Rumohr GbR</b><br>
+      Gesellschaft bürgerlichen Rechts<br>
+      Gesellschafter: Christian Blum, Frederik von Rumohr</p>
+      
+      <p>  Linienstr. 134 10115 Berlin<br>
+      Tel.:<a href="tel:004930688374350">030 - 688 37 43 5 - 0</a><br>
+      Fax: 030 - 688 37 43 5 - 1<br>
+      E-Mail:<a href="mailto:info@b-f-r.com">info@b-f-r.com</a></p>
+      
+      <p> USt-IdNr.: DE236778078<br>
+      Finanzamt Mitte/Tiergarten</p>
+      
+      
+      <p> Haftungshinweis: Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
+      
+      <p> Inhaltlich verantwortlich gemäß §6 MDStV: Christian Blum</p>
+      
+      <p>  © 2018, Blum|Fischer|Rumohr GbR<br>
+      Alle Rechte vorbehalten. Insbesondere dürfen Nachdruck, das Kopieren von Inhalten sowie die Vervielfältigung auf Datenträger nur nach vorheriger schriftlicher Zustimmung erfolgen.</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button [routerDirection]="'root'" [routerLink]="['/home']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/cards']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="logo-buffer" ></ion-icon>
+      </ion-button>
+      <ion-button [routerDirection]="'root'" [routerLink]="['/barcode']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="barcode" ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,202 @@
+[
+    {
+        "name": "Ihre Karten",
+        "name_eng": "Your cards",
+        "lang": "ger",
+        "item": [
+            
+                {
+                  "name": "Argument",
+                  "name_eng": "Argument",
+                  "url": "/karte-argument",
+                  "id": "s2",
+                  "code": "aD3BHnG8"
+                },
+                {
+                  "name": "Argumentation",
+                  "name_eng": "Argumentation",
+                  "url": "/karte-argumentation",
+                  "id": "s3",
+                  "code": "bA3gSnD8"
+                },
+                {
+                  "name": "Beschwerdemanagement",
+                  "name_eng":"Beschwerdemanagement",
+                  "url": "/karte-beschwerdemanagement",
+                  "id": "s4",
+                  "code": "cD3BHnG9"
+                },
+                {
+                  "name": "Redenschreiben - Beziehungsdreieck",
+                  "name_eng":"Redenschreiben - Beziehungsdreieck",
+                  "url": "/karte-beziehungsdreieck",
+                  "id": "s5",
+                  "code": "dB3gSnD8"
+                },
+                {
+                  "name": "Empfehlungsdreieck",
+                  "name_eng":"Empfehlungsdreieck",
+                  "url": "/karte-empfehlungsdreieck",
+                  "id": "s6",
+                  "code": "eD3BHnG9"
+                },
+                {
+                  "name": "Entscheidungskompetenz",
+                  "name_eng":"Entscheidungskompetenz",
+                  "url": "/karte-entscheidungskompetenz",
+                  "id": "s7",
+                  "code": "fA3gSnD9"
+                },
+                {
+                  "name": "Fünfsatz",
+                  "name_eng":"Rule of Five",
+                  "url": "/karte-fuenfsatz",
+                  "id": "s8",
+                  "code": "gK3BHnG10"
+                },
+                {
+                  "name": "Gesprächsleitfaden",
+                  "name_eng":"Conversation Guide",
+                  "url": "/karte-gespraechsleitfaden",
+                  "id": "s9",
+                  "code": "hA3gSnD9"
+                },
+                {
+                  "name":"Gliederung und Redestruktur",
+                  "name_eng":"Gliederung und Redestruktur",
+                  "url": "/karte-gliederunguredestruktur",
+                  "id": "s10",
+                  "code": "iD3BHnG10"
+                },
+                {
+                  "name":"Grad der Schlussfolgerung",
+                  "name_eng":"Degree of Conclusion",
+                  "url": "/karte-gradderschlussfolgerung",
+                  "id": "s11",
+                  "code": "jA3gSnD8"
+                },
+                {
+                  "name":"Interessen und Positionen",
+                  "name_eng":"Interests and Positions",
+                  "url": "/karte-interessenupositionen",
+                  "id": "s12",
+                  "code": "kD3BHnG9"
+                },
+                {
+                  "name":"Konfliktbewältigung",
+                  "name_eng":"Conflict Resolution",
+                  "url": "/karte-konfliktbewaeltigung",
+                  "id": "s13",
+                  "code": "lA3gSnD9"
+                },
+                {
+                  "name":"Kundenzyklus",
+                  "name_eng":"Kundenzyklus",
+                  "url": "/karte-kundenzyklus",
+                  "id": "s14",
+                  "code": "mD3BHnG10"
+                },
+                {
+                  "name":"Lob und Kritik",
+                  "name_eng":"Lob und Kritik",
+                  "url": "/karte-lobukritik",
+                  "id": "s15",
+                  "code": "nB3gSnD9"
+                },
+                {
+                  "name":"Logik in Argument und Argumentation",
+                  "name_eng":"Logic of Argument and Argumentation",
+                  "url": "/karte-lokikinargument",
+                  "id": "s16",
+                  "code": "oD3BHnG10"
+                },
+                {
+                  "name":"Manuskripttechnik",
+                  "name_eng":"Manuskripttechnik",
+                  "url": "/karte-manuskripttechnik",
+                  "id": "s17",
+                  "code": "pA3gSnD10"
+                },
+                {
+                  "name":"Merkmal – Vorteil – Nutzen",
+                  "name_eng":"Attribute – Advantage – Benefit",
+                  "url": "/karte-merkmalvorteilnutzen",
+                  "id": "s18",
+                  "code": "qK3BHnG11"
+                },
+                {
+                  "name":"Möglichkeitsraum in einem Gespräch",
+                  "name_eng":"Möglichkeitsraum in einem Gespräch",
+                  "url": "/karte-moeglichkeitsraum",
+                  "id": "s19",
+                  "code": "rA3gSnD10"
+                },
+                {
+                  "name":"Motivation",
+                  "name_eng":"Motivation",
+                  "url": "/karte-motivation",
+                  "id": "s20",
+                  "code": "sD3BHnG11"
+                },
+                {
+                  "name":"Netzwerken",
+                  "name_eng":"Netzwerken",
+                  "url": "/karte-netzwerken",
+                  "id": "s21",
+                  "code": "tA3gSnD9"
+                },
+                {
+                  "name":"Planung",
+                  "name_eng":"Planung",
+                  "url": "/karte-planung",
+                  "id": "s22",
+                  "code": "uD3BHnG10"
+                },
+                {
+                  "name":"Reifegradmodell nach Hersey & Blanchard",
+                  "name_eng":"Reifegradmodell nach Hersey & Blanchard",
+                  "url": "/karte-reifegradmodell",
+                  "id": "s23",
+                  "code": "vA3gSnD10"
+                },
+                {
+                  "name":"Selbstbild und Fremdbild nach Johari",
+                  "name_eng":"Selbstbild und Fremdbild nach Johari",
+                  "url": "/karte-selbstbildfremdbild",
+                  "id": "s24",
+                  "code": "wD3BHnG11"
+                },
+                {
+                  "name":"Selbstmanagement nach Eisenhower",
+                  "name_eng":"Selbstmanagement nach Eisenhower",
+                  "url": "/karte-selbstmanagement",
+                  "id": "s25",
+                  "code": "xB3gSnD10"
+                },
+                {
+                  "name":"Sender und Empfänger",
+                  "name_eng":"Sender and Receiver",
+                  "url": "/karte-senderuempfaenger",
+                  "id": "s26",
+                  "code": "yD3BHnG11"
+                },
+                {
+                  "name":"Steuerungszeichen",
+                  "name_eng":"Steuerungszeichen",
+                  "url": "/karte-steuerungszeichen",
+                  "id": "s27",
+                  "code": "zA3gSnD11"
+                },
+                {
+                  "name":"Visualisierungen",
+                  "name_eng":"Visualisierungen",
+                  "url": "/karte-visualisierungen",
+                  "id": "s28",
+                  "code": "zzK3BHnG12"
+                }
+               
+            
+        ]
+    }
+    
+]

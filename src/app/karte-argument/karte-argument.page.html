@@ -1,0 +1,308 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="getCurrentLang()=='de'">Argument</ion-title>
+    <ion-title *ngIf="getCurrentLang()=='en'">Argument</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-row *ngIf="textDefault=='notset'" class="ion-padding-vertical" id="notActive"  class="ion-text-center ion-align-items-end ion-justify-content-center ion-padding">
+  <div class="content">
+    <h2>{{ 'needto_activate' | translate }}</h2>
+    <ion-button color="primary" [routerDirection]="'root'" [routerLink]="['/barcode']">
+      <ion-icon name="barcode" style="display: inline-block; margin-right: 0.5em;"></ion-icon>
+      {{ 'menu.activate_pages' | translate }}
+    </ion-button>
+  </div>
+</ion-row>
+<ion-content *ngIf="getCurrentLang()=='de'" [ngClass]="{'offline' :textDefault=='notset'}">
+
+  <img src="/assets/img/karte-argument.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>Ziel</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was kann ich mit diesem Modell erreichen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+     <ol>   <li>Erstens: Sie strukturieren Ihr eigenes Denken logisch.</li>
+      <li> Zweitens: Sie erhöhen das gegenseitige Verständnis durch klar gegliederte Äußerungen und durch das Gliedern
+        weniger eindeutiger Äußerungen anderer.</li>
+        <li> Drittens: Sie erhöhen die Wahrscheinlichkeit deutlich, andere zu überzeugen.</li></ol>
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was ist die Ausgangslage?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      <p> Argumentieren ist einerseits alltäglich. Andererseits wissen die wenigsten, was ein Argument genau ist –
+        und noch weniger, wie man ein Argument zuhörerorientiert aufbaut. Das führt zu Missverständnissen und
+        Enttäuschungen allgemein beim gegenseitigen Austausch und besonders bei der Überzeugungsarbeit.
+      </p>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>LÖSUNGSANSATZ</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wie komme ich von der Ausgangslage zum Ziel?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <p> Ein Argument besteht aus mindestens zwei Aussagen, zwischen denen (ausgesprochen oder nur gedacht)
+        ein „weil“ steht. Oder ein „deshalb“. Oder ein „darum“. Oder ein anderer Begriff, der die eine Aussage zur
+        Begründung für die andere macht.
+      </p>
+      <p> Die eine Aussage, die Begründung, dient also als Prämisse. Zum Beispiel: „Ich denke, dass wir nach vier
+        Stunden Arbeit alle müde sind.“ Die Prämisse begründet eine andere Aussage, die Schlussfolgerung (andere
+        Begriffe: These, Konklusion). Zum Beispiel: „Lassen Sie uns eine Pause machen!“ Oder anders herum (erst
+        Schlussfolgerung, dann Prämisse): „Lassen Sie uns eine Pause machen, weil nach vier Stunden Arbeit bestimmt alle
+        müde sind.“</p>
+      <p> Schließlich können Sie Ihre Aussagen noch illustrieren. Diese Veranschaulichung ist selten in der Logik
+        stark. Im Gegenteil: sie ist eine logisch schwache Prämisse. Aber sie hat ihre Stärken in der Vermittlung.
+        Nach der These, die der Zuhörer oder Leser nur schwer einordnen kann, und nach der Begründung, die das ganze
+        schon verständlicher macht, hilft der illustrative Teil: Er schließt den Gedankengang so anschaulich wie
+        möglich ab. Im gegebenen Beispiel: „Lassen Sie uns eine Pause machen, weil nach vier Stunden Arbeit bestimmt
+        alle müde sind. Ich sehe viele Gähnen.“
+      </p>
+      <p>Die Abfolge der drei Aspekte eines Arguments ist nicht festgelegt. Der Anlass gibt die beste Anordnung vor.
+        Und im Zweifel gilt: These, Begründung, Veranschaulichung.</p>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        LITERATUR
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content> 
+      <p><b>Jürgen August Alt:</b><br> Richtig argumentieren: oder wie man in Diskussionen Recht behält</p>
+      <p><b>Steven L. Johnson: </b><br> Winning Debates. <a href="https://debate.uvm.edu/dcpdf/Steven_Johnson_Winning_Debates_2009.pdf"  target="_blank">https://debate.uvm.edu/dcpdf/Steven_Johnson_Winning_Debates_2009.pdf</a></p>
+      <p><b>Monthy Python Sketch:</b> <br> <a href="https://www.youtube.com/watch?v=ohDB5gbtaEQ"  target="_blank">https://www.youtube.com/watch?v=ohDB5gbtaEQ</a></p>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>QUERVERWEISE</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wo finde ich mehr zur Herleitung? Wie kann es weiter gehen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-gradderschlussfolgerung']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Grad der Schlussfolgerung</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-lokikinargument']">
+      <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Logik in Argument und Argumentation</div>
+        </ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-argumentation']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Argumentation</div>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>
+<ion-content *ngIf="getCurrentLang()=='en'" [ngClass]="{'offline' :textDefault=='notset'}">
+
+  <img src="/assets/img/karte-argument.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>GOAL</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        What can I achieve with this model?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+   <ol><li> 	You considerably increase the likelihood of convincing others. </li>
+    <li>You structure your thinking logically.  </li>
+      <li>	You enhance mutual intelligibility through clearly structured statements and by giving structure
+    to the unclear statements of others.
+    </li></ol>
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        What is the situation?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      <p> Making arguments is an everyday activity. Yet few people actually know what an argument is – and even 
+        fewer how an argument should be constructed to appeal to their listeners. When two people are talking to one another, especially when they are trying to convince each other, the upshot is often misunderstanding and disappointment.
+        
+      </p>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>SOLUTION</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        How do I achieve my goals?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <p>An argument consists of at least two statements (spoken or only thought) connected by words like “because,” “since,” and “therefore.” The connective word always serves to show how one statement justifies the other.
+      </p>
+      <p> One sentence, the explanation, thus serves as a premise. For example: “I think we’re all tired after four 
+        hours of work.” The premise justifies a second sentence, the conclusion (or statement). For example: “Let’s take a break!”  Or the other way around (first the conclusion, then the premise): “Let’s take a break, since we’ve all got to be tired after four hours of work.”
+        </p>
+      <p>Finally, statements can also be illustrated. Such exemplification seldom plays an essential role in logic. On 
+        the contrary, it is a logically weak premise. But it does have a strength, namely in its ability to communicate information. After a thesis that the listener or reader can understand only with difficulty, and after a justification that makes everything somewhat more intelligible, an illustration helps: it concludes the train 
+        of thought as concretely as possible. In the example given above: “Let’s take a break, since we’ve all got to be tired after four hours of work. I see several yawns.”
+        
+      </p>
+      <p>The sequence of an argument’s three aspects varies according to the circumstance. But when in doubt: 
+        State! Explain! Illustrate!
+        </p>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>FURTHER READING</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+      Where can I find more about derivation? How can it go on?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+     <p><b>Steven L. Johnson: </b><br> Winning Debates. <a  href="https://debate.uvm.edu/dcpdf/Steven_Johnson_Winning_Debates_2009.pdf"  target="_blank">https://debate.uvm.edu/dcpdf/Steven_Johnson_Winning_Debates_2009.pdf</a> </p>
+    
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>CROSS-REFERENCES</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+       Where can I get more background information?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-gradderschlussfolgerung']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Degree of Conclusion</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-lokikinargument']">
+       <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Logic of Argument and Argumentation</div>
+        </ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-argumentation']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Argumentation</div>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/home']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/cards']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="logo-buffer"></ion-icon>
+      </ion-button>
+      <ion-button [routerDirection]="'root'" [routerLink]="['/barcode']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="barcode"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

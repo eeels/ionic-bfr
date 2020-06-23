@@ -1,0 +1,291 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="getCurrentLang()=='de'">Kundenzyklus</ion-title>
+    <ion-title *ngIf="getCurrentLang()=='en'">Kundenzyklus</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-row *ngIf="textDefault=='notset'" class="ion-padding-vertical" id="notActive"  class="ion-text-center ion-align-items-end ion-justify-content-center ion-padding">
+  <div class="content">
+    <h2>{{ 'needto_activate' | translate }}</h2>
+    <ion-button color="primary" [routerDirection]="'root'" [routerLink]="['/barcode']">
+      <ion-icon name="barcode" style="display: inline-block; margin-right: 0.5em;"></ion-icon>
+      {{ 'menu.activate_pages' | translate }}
+    </ion-button>
+  </div>
+</ion-row>
+<ion-content *ngIf="getCurrentLang()=='de'" [ngClass]="{'offline' :textDefault=='notset'}">
+
+  <img src="/assets/img/karte-kundenzyklus.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>Ziel</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was kann ich mit diesem Modell erreichen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Sie führen Kunden optimal im Interesse aller Beteiligten. Sie erreichen damit immer wieder lange Partnerschaften, akquirieren neue Kunden über Empfehlungen und gewinnen andere nach Phasen der Abstinenz zurück.
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was ist die Ausgangslage?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      Ein Anbieter möchte mit jedem Kunden grundsätzlich eine lange und umsatzreiche Zusammenarbeit erreichen – steuert das aber zu selten überlegt. Zudem nutzen Anbieter in der Regel zu wenig (und fast immer zu spät!) die Möglichkeiten des Netzwerks ihres Kunden.
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>LÖSUNGSANSATZ</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wie komme ich von der Ausgangslage zum Ziel?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+    
+      <p> Wieviel Investition führt zu einem neuen Kunden? Zumeist ist der Aufwand hoch.  Deshalb gilt dreierlei: Kunden halten, Umsatz mit bestehenden Kunden steigern und den richtigen Zeitpunkt für die Bitte nach Empfehlungen wählen. 
+      </p>
+      <p> Ein erster Umsatz zeigt dem Anbieter selten eindeutig, ob der Kunde tatsächlich zufrieden ist. Man kennt sich noch nicht gut, lernt sich kennen, sozialisiert sich.
+      </p>
+      <p>Aufmerksamkeit und Fragen geben dem Anbieter die Möglichkeit, einem Kunden passgenaue Angebote zu unterbreiten und den Umsatz zu steigern. Das ist der richtige Moment, den Kunden zu bitten, den Anbieter in seinem Netzwerk zu empfehlen ( Empfehlungsdreieck). Denn schnell kann es dafür zu spät sein: Mit dem Umsatz sinkt auch die Erfolgswahrscheinlichkeit der Empfehlungen.
+      </p>
+      <p>Der Clou: die Empfehlung hilft nicht nur Neukunden zu gewinnen. Sie hilft zudem aus einem zufriedenen Kunden einen loyalen zu machen, der auch bei kleinen Enttäuschungen oder verlockenden Angeboten des Wettbewerbs dem vertrauten Anbieter treu bleibt. Denn der Mensch tendiert dazu, seine Taten (hier: eine ausgesprochene Empfehlung) im Nachgang vor sich selbst und anderen zu rechtfertigen.
+      </p>
+      <p> Sinkt der Umsatz (Degenerationsphase) sollte das zur Frage führen, ob sich dieser Trend zu Kündigung, Auslaufen und Abstinenz verstetigt. Vielleicht lässt sich Gegensteuern, bevor sich ein Vorfall zum Negativtrend verstetigt, gegen den zu stemmen zumeist kontraproduktiv ist. Kündigungen gilt es mit Achtung der Entscheidung zu begegnen. So sinken die Chancen negativer Berichte und steigen die Chancen weiter im Kontakt zu bleiben – damit aus einer Abstinenz Revitalisierung werden kann.
+        </p>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        LITERATUR
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p><b>Manfred Bruhn </b><br>Relationship Marketing: Das Management von Kundenbeziehungen</p>
+
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>QUERVERWEISE</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wo finde ich mehr zur Herleitung? Wie kann es weiter gehen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+
+      
+
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-empfehlungsdreieck']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Empfehlungsdreieck</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-netzwerken']">
+      <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Netzwerken</div>
+        </ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-merkmalvorteilnutzen']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">  Merkmal – Vorteil – Nutzen </div>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>
+<ion-content *ngIf="getCurrentLang()=='en'" [ngClass]="{'offline' :textDefault=='notset'}">
+
+  <img src="/assets/img/karte-kundenzyklus.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>Ziel</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was kann ich mit diesem Modell erreichen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Sie führen Kunden optimal im Interesse aller Beteiligten. Sie erreichen damit immer wieder lange Partnerschaften, akquirieren neue Kunden über Empfehlungen und gewinnen andere nach Phasen der Abstinenz zurück.
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was ist die Ausgangslage?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      Ein Anbieter möchte mit jedem Kunden grundsätzlich eine lange und umsatzreiche Zusammenarbeit erreichen – steuert das aber zu selten überlegt. Zudem nutzen Anbieter in der Regel zu wenig (und fast immer zu spät!) die Möglichkeiten des Netzwerks ihres Kunden.
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>LÖSUNGSANSATZ</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wie komme ich von der Ausgangslage zum Ziel?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+    
+      <p> Wieviel Investition führt zu einem neuen Kunden? Zumeist ist der Aufwand hoch.  Deshalb gilt dreierlei: Kunden halten, Umsatz mit bestehenden Kunden steigern und den richtigen Zeitpunkt für die Bitte nach Empfehlungen wählen. 
+      </p>
+      <p> Ein erster Umsatz zeigt dem Anbieter selten eindeutig, ob der Kunde tatsächlich zufrieden ist. Man kennt sich noch nicht gut, lernt sich kennen, sozialisiert sich.
+      </p>
+      <p>Aufmerksamkeit und Fragen geben dem Anbieter die Möglichkeit, einem Kunden passgenaue Angebote zu unterbreiten und den Umsatz zu steigern. Das ist der richtige Moment, den Kunden zu bitten, den Anbieter in seinem Netzwerk zu empfehlen (Karte Empfehlungsdreieck). Denn schnell kann es dafür zu spät sein: Mit dem Umsatz sinkt auch die Erfolgswahrscheinlichkeit der Empfehlungen.
+      </p>
+      <p>Der Clou: die Empfehlung hilft nicht nur Neukunden zu gewinnen. Sie hilft zudem aus einem zufriedenen Kunden einen loyalen zu machen, der auch bei kleinen Enttäuschungen oder verlockenden Angeboten des Wettbewerbs dem vertrauten Anbieter treu bleibt. Denn der Mensch tendiert dazu, seine Taten (hier: eine ausgesprochene Empfehlung) im Nachgang vor sich selbst und anderen zu rechtfertigen.
+      </p>
+      <p> Sinkt der Umsatz (Degenerationsphase) sollte das zur Frage führen, ob sich dieser Trend zu Kündigung, Auslaufen und Abstinenz verstetigt. Vielleicht lässt sich Gegensteuern, bevor sich ein Vorfall zum Negativtrend verstetigt, gegen den zu stemmen zumeist kontraproduktiv ist. Kündigungen gilt es mit Achtung der Entscheidung zu begegnen. So sinken die Chancen negativer Berichte und steigen die Chancen weiter im Kontakt zu bleiben – damit aus einer Abstinenz Revitalisierung werden kann.
+        </p>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        LITERATUR
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p><b>Manfred Bruhn </b><br>Relationship Marketing: Das Management von Kundenbeziehungen</p>
+
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>QUERVERWEISE</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wo finde ich mehr zur Herleitung? Wie kann es weiter gehen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+
+      
+
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-empfehlungsdreieck']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Empfehlungsdreieck</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-netzwerken']">
+      <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Netzwerken</div>
+        </ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-merkmalvorteilnutzen']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">  Merkmal – Vorteil – Nutzen </div>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/home']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/cards']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="logo-buffer"></ion-icon>
+      </ion-button>
+      <ion-button [routerDirection]="'root'" [routerLink]="['/barcode']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="barcode"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

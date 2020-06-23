@@ -1,0 +1,286 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="getCurrentLang()=='de'">Visualisierungen</ion-title>
+    <ion-title *ngIf="getCurrentLang()=='en'">Visualisierungen</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-row *ngIf="textDefault=='notset'" class="ion-padding-vertical" id="notActive"  class="ion-text-center ion-align-items-end ion-justify-content-center ion-padding">
+  <div class="content">
+    <h2>{{ 'needto_activate' | translate }}</h2>
+    <ion-button color="primary" [routerDirection]="'root'" [routerLink]="['/barcode']">
+      <ion-icon name="barcode" style="display: inline-block; margin-right: 0.5em;"></ion-icon>
+      {{ 'menu.activate_pages' | translate }}
+    </ion-button>
+  </div>
+</ion-row>
+<ion-content *ngIf="getCurrentLang()=='de'" [ngClass]="{'offline' :textDefault=='notset'}">
+
+  <img src="/assets/img/karte-visualisierungen.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>Ziel</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was kann ich mit diesem Modell erreichen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Ihre Visualisierung unterstützt Ihr Redeziel. Komplexe Zusammenhänge werden anschaulich und intuitiv verständlich. Denn Sie wissen, wie viele Visualisierungen Sie in jedem spezifischen Fall nutzen sollten und welche Form angemessen ist.
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was ist die Ausgangslage?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      Wer seinen Vortrag durch Visualisierung unterstützen möchte, versucht häufig für jede Aussage ein Bild zu finden. Damit sind die meisten Präsentationen überladen und schaden mehr als sie nutzen. Gleichzeitig gilt es, das Potential der Darstellung nicht zu verschenken.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>LÖSUNGSANSATZ</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wie komme ich von der Ausgangslage zum Ziel?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+  
+      <p> Eine einfache Checkliste hilft bei der Auswahl der visualisierten Inhalte.
+      </p>
+      <ol> <li>>Senkt diese Visualisierung den Redeaufwand? Oder anders formuliert: erhöht sie die Verständlichkeit? Ein Organigramm lässt sich z.B. besser mit der Darstellung erklären und verstehen.
+      </li><li>	Möchte ich diesen Aspekt besonders betonen? Sollen sich die Zuhörer von allen Aspekten insbesondere diesen merken? Hier ist die sorgfältige Auswahl wichtig. Denn je mehr gezeigt wird, desto schwerer fällt dem Publikum im Nachgang die Erinnerung.
+      </li><li>	Trägt diese Visualisierung zur Unterhaltung bei? Und genauso wichtig: ist nach den beiden ersten Punkten der Checkliste dafür noch Platz? Dann bietet eine Visualisierung die Möglichkeit z.B. das Tempo zu wechseln mit einem ruhigen Bild, einer sachlichen Grafik oder einem schnellen Video. 
+      </li></ol>
+      <p>   Die Möglichkeiten zu visualisieren sind ungezählt. Eine Hilfestellung bietet der rechte Teil der Karte. Wer seine vorhandenen Ideen prüfen möchte, liest die Tabelle von links nach rechts. Wer unsicher ist, welcher Ansatz den Redezielen am besten dient, liest die Tabelle von rechts nach links und kann sich fragen: Ist hier vor allem Präzision gefragt, Übersicht, Merkfähigkeit oder Prägnanz?
+      </p>
+      <p>  In jedem Fall folgt die Entscheidung über das Medium erst jetzt, zum Schluss. Erneut ist die Vielfalt groß: Neben Computer und Beamer, Flipchart und Pinnwand, Tageslichtprojektor und Tafel steht Ihnen manchmal die Chance zur Verfügung, mitzubringen, worüber sie reden.
+        </p>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        LITERATUR
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p><b>Josef W. Seifert:</b><br> Visualisieren, Präsentieren, Moderieren</p>
+     
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>QUERVERWEISE</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wo finde ich mehr zur Herleitung? Wie kann es weiter gehen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-senderuempfaenger']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Sender & Empfänger
+            
+           
+            </div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-gliederunguredestruktur']">
+       <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Gliederung und Redestruktur</div>
+        </ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-merkmalvorteilnutzen']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Merkmal – Vorteil – Nutzen </div>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>
+<ion-content *ngIf="getCurrentLang()=='en'" [ngClass]="{'offline' :textDefault=='notset'}">
+  <img src="/assets/img/karte-visualisierungen.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>Ziel</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was kann ich mit diesem Modell erreichen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Ihre Visualisierung unterstützt Ihr Redeziel. Komplexe Zusammenhänge werden anschaulich und intuitiv verständlich. Denn Sie wissen, wie viele Visualisierungen Sie in jedem spezifischen Fall nutzen sollten und welche Form angemessen ist.
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was ist die Ausgangslage?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      Wer seinen Vortrag durch Visualisierung unterstützen möchte, versucht häufig für jede Aussage ein Bild zu finden. Damit sind die meisten Präsentationen überladen und schaden mehr als sie nutzen. Gleichzeitig gilt es, das Potential der Darstellung nicht zu verschenken.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>LÖSUNGSANSATZ</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wie komme ich von der Ausgangslage zum Ziel?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+  
+      <p> Eine einfache Checkliste hilft bei der Auswahl der visualisierten Inhalte.
+      </p>
+      <ol> <li>Senkt diese Visualisierung den Redeaufwand? Oder anders formuliert: erhöht sie die Verständlichkeit? Ein Organigramm lässt sich z.B. besser mit der Darstellung erklären und verstehen.
+      </li><li>	Möchte ich diesen Aspekt besonders betonen? Sollen sich die Zuhörer von allen Aspekten insbesondere diesen merken? Hier ist die sorgfältige Auswahl wichtig. Denn je mehr gezeigt wird, desto schwerer fällt dem Publikum im Nachgang die Erinnerung.
+      </li><li>	Trägt diese Visualisierung zur Unterhaltung bei? Und genauso wichtig: ist nach den beiden ersten Punkten der Checkliste dafür noch Platz? Dann bietet eine Visualisierung die Möglichkeit z.B. das Tempo zu wechseln mit einem ruhigen Bild, einer sachlichen Grafik oder einem schnellen Video. 
+      </li></ol>
+      <p>   Die Möglichkeiten zu visualisieren sind ungezählt. Eine Hilfestellung bietet der rechte Teil der Karte. Wer seine vorhandenen Ideen prüfen möchte, liest die Tabelle von links nach rechts. Wer unsicher ist, welcher Ansatz den Redezielen am besten dient, liest die Tabelle von rechts nach links und kann sich fragen: Ist hier vor allem Präzision gefragt, Übersicht, Merkfähigkeit oder Prägnanz?
+      </p>
+      <p>  In jedem Fall folgt die Entscheidung über das Medium erst jetzt, zum Schluss. Erneut ist die Vielfalt groß: Neben Computer und Beamer, Flipchart und Pinnwand, Tageslichtprojektor und Tafel steht Ihnen manchmal die Chance zur Verfügung, mitzubringen, worüber sie reden.
+        </p>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        LITERATUR
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p><b>Josef W. Seifert:</b><br> Visualisieren, Präsentieren, Moderieren</p>
+     
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>QUERVERWEISE</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wo finde ich mehr zur Herleitung? Wie kann es weiter gehen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-senderuempfaenger']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Sender & Empfänger
+            
+           
+            </div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-gliederunguredestruktur']">
+       <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Gliederung und Redestruktur</div>
+        </ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-merkmalvorteilnutzen']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Merkmal – Vorteil – Nutzen </div>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/home']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/cards']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="logo-buffer"></ion-icon>
+      </ion-button>
+      <ion-button [routerDirection]="'root'" [routerLink]="['/barcode']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="barcode"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

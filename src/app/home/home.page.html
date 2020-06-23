@@ -1,0 +1,70 @@
+<ion-header translucent="true" no-border no-shadow translucent id="Start">    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+
+</ion-header>
+
+
+
+<ion-content fullscreen="true" force-overscroll="false">
+
+
+
+
+  <div id="vid">
+    <div class="overlay"></div>
+    <div class="text ion-text-center"><div class="ion-text-center" style="text-align:center; width:100%"> <h1>BLUM | FISCHER | RUMOHR</h1>
+      <p>Beratung für strategische Kommunikation</p></div></div>
+    <video autoplay muted loop class="bg-vid">
+      <source src="/assets/video/Startseite.mp4" type="video/mp4">
+    </video>
+  </div>
+
+
+
+  <ion-slides autoplay="4000" id="hompage-slider" pager loop class="ion-padding" >
+    <ion-slide class="ion-padding">
+      <ion-text >
+       
+       
+        <p><span *ngIf="getCurrentLang()=='de'"></span>Mit dieser App haben Sie zentrale Inhalte unserer Seminare immer dabei. Klicken Sie sich durch die Modelle und finden Sie Anregungen und Antworten zu Ihren Fragen. Sie möchten noch mehr Inhalte? Melden Sie sich. Wir freuen uns auf Ihre Nachricht! </p>
+      
+
+      </ion-text>
+
+    </ion-slide>
+    <ion-slide class="ion-padding ">
+      <ion-text >
+     
+        <p>B|F|R ist eine Beratung für strategische Kommunikation. Wir unterstützen Sie in allen Fragen rund um Ihren Auftritt und Ihre Führung. Wir trainieren, coachen, moderieren und beraten. Und wir verknüpfen diese Elemente zu Ihrem Nutzen.</p>
+      </ion-text>
+    </ion-slide>
+    <ion-slide class="ion-padding ">
+      <ion-text >
+        <p>Zu unseren Kernthemen gehören Führung, Verhandlung, Konfliktmanagement, Präsentation, Reden schreiben und halten. Unsere Expertise nutzen wir beim Trainieren, Coachen, Moderieren von Workshops und Podien sowie in der Organisationsentwicklung.</p>
+      </ion-text>
+    </ion-slide>
+  </ion-slides>
+  <ion-button expand="block" id="button" color="primary" [routerDirection]="'root'" [routerLink]="['/barcode']"  fill="outline">
+    <ion-icon name="barcode" slot="start"></ion-icon>
+    {{ 'menu.activate_pages' | translate }}
+  </ion-button>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button [routerDirection]="'root'" [routerLink]="['/home']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+      <ion-button [routerDirection]="'root'" [routerLink]="['/cards']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="logo-buffer"></ion-icon>
+      </ion-button>
+      <ion-button [routerDirection]="'root'" [routerLink]="['/barcode']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="barcode"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

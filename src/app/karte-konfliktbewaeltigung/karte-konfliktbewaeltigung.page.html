@@ -1,0 +1,367 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="getCurrentLang()=='de'">Konfliktbewältigung</ion-title>
+    <ion-title *ngIf="getCurrentLang()=='en'">Conflict Resolution</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-row *ngIf="textDefault=='notset'" class="ion-padding-vertical" id="notActive"
+  class="ion-text-center ion-align-items-end ion-justify-content-center ion-padding">
+  <div class="content">
+    <h2>{{ 'needto_activate' | translate }}</h2>
+    <ion-button color="primary" [routerDirection]="'root'" [routerLink]="['/barcode']">
+      <ion-icon name="barcode" style="display: inline-block; margin-right: 0.5em;"></ion-icon>
+      {{ 'menu.activate_pages' | translate }}
+    </ion-button>
+  </div>
+</ion-row>
+<ion-content *ngIf="getCurrentLang()=='de'" [ngClass]="{'offline' :textDefault=='notset'}">
+
+  <img src="/assets/img/karte-konfliktbewaeltigung.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>Ziel</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was kann ich mit diesem Modell erreichen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Sie befrieden die Situation und werden wieder handlungsfähig. Darüber hinaus ziehen Sie aus Konflikten den
+      größtmöglichen inhaltlichen Gewinn. Dabei schützen Sie die Beziehung oder verbessern diese sogar.
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was ist die Ausgangslage?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      Im Konflikt sehen die meisten nur die Optionen Nachgeben, Durchsetzen oder Kompromiss. Dabei verschenken sie
+      Innovationspotential und riskieren einen bitteren Beigeschmack bei jedem Zugeständnis.
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>LÖSUNGSANSATZ</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wie komme ich von der Ausgangslage zum Ziel?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+
+
+      <p> Die Achsen der Grafik sind keine natürlichen Widersprüche. Manchmal – und häufiger als diejenigen meinen, die
+        es noch nie probiert haben – können Konfliktparteien beides zugleich zeigen: Durchsetzungsvermögen und Willen
+        zur Zusammenarbeit; Berücksichtigung der eigenen Ziele und der Ziele der Gegenpartei. Dabei helfen folgende
+        Gedanken:
+      </p>
+      <ul>
+        <li>Konflikte haben Sach- und Beziehungsaspekte. Behandeln müssen die Konfliktparteien beides. Aber eines nach
+          dem anderen. Und im Zweifel den Beziehungsaspekt zuerst.
+        </li>
+        <li>Für Beziehungsaspekte: Hier helfen Ich-Botschaften. Oder ausführlich: Wahrnehmung, Wirkung, Wunsch.
+        </li>
+        <li> Für Sachaspekte: Über die Möglichkeit, eine wirklich gute Lösung finden zu können, die vielem Widerspruch
+          standhält, sollten man sich freuen. Gute Lösungen lassen sich leichter finden, wenn die Konfliktpartner sich
+          abseits ihrer verhärteten Forderungen auch darüber austauschen, was ihnen dabei eigentlich wichtig ist
+          (Karte Interessen & Positionen).
+        </li>
+        <li> Einwände gilt es soweit wie möglich zu thematisieren, z.B. auch: „Dann stehe ich vor anderen blöd da.“ Dann
+          werden Vorwände (Stellvertreterargumente) weniger wichtig. Ein Vorwand versteckt einen Einwand. Ist ein
+          Vorwand überwunden, verstellt schnell ein zweiter den Weg zum eigentlichen, vielleicht als peinlich
+          empfundenen Grund, dem Einwand. Eine Sackgasse.
+        </li>
+        <li> Vertagen ist meistens eine Option. Manchmal reichen wenige Minuten Pause.</li>
+      </ul>
+
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        LITERATUR
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p><b> Gerhard Schwarz: Konfliktmanagement: </b><br> Konflikte erkennen, analysieren, lösen</p>
+      <p><b> Heinz Jiranek, Andreas Edmüller:</b><br> Konfliktmanagement.: Konflikten vorbeugen, sie erkennen und lösen
+      </p>
+      <p><b>Loriots Sketch über Badewasser und Schwimmente:</b><br> <a
+          href=" https://www.youtube.com/watch?v=4pTITcV-Se8" target="_blank">
+          https://www.youtube.com/watch?v=4pTITcV-Se8</a></p>
+
+
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>QUERVERWEISE</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wo finde ich mehr zur Herleitung? Wie kann es weiter gehen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-interessenupositionen']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Interessen und Positionen</div>
+        </ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-gespraechsleitfaden']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">
+            Gesprächsleitfaden</div>
+        </ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-moeglichkeitsraum']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">
+            Möglichkeitsraum in einem Gespräch</div>
+        </ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-argument']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">
+            Argument
+          </div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-beschwerdemanagement']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">
+            Beschwerdemanagement
+          </div>
+        </ion-label>
+      </ion-item>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>
+<ion-content *ngIf="getCurrentLang()=='en'" [ngClass]="{'offline' :textDefault=='notset'}">
+
+  <img src="/assets/img/karte-conflict.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>GOAL</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        What can I achieve with this model?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      You can resolve social impasses, disputes, and aggressive situations. You will be able to establish a new
+      foundation for dialogue and action. In addition, you will turn conflicts to your advantage, all the while
+      safeguarding the relationship or even improving it.r statements of others.
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        What is the situation?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      In conflict situations, most people only see the following options: accommodation, self-assertion, or compromise.
+      They thus neglect the potential for innovation that conflict yields. And every concession
+      has a bitter aftertaste.
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>SOLUTION</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        How do I achieve my goals?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <p>The axes of the graph do not represent natural antitheses. Sometimes – and more often than those who have never
+        tried it think – parties to a conflict can show both at the same time: assertiveness and a willingness to
+        collaborate; consideration of personal goals and of the opposing party’s goals. The following observations
+        are helpful: </p>
+      <ul>
+        <li>Conflicts have factual and relational aspects. Parties to a conflict must deal with both. The rule is:
+          relational aspects provide the foundation, and factual aspects can be resolved more easily when the
+          relationship is good.
+        </li>
+        <li> I-statements help with relational aspects, i.e. perceptions, impacts, wishes.
+        </li>
+        <li> For factual aspects: parties to a conflict should embrace – and show that they embrace – the possibility
+          of finding a truly good solution that is capable of withstanding a great deal of opposition.
+        </li>
+        <li> All possible objections should be voiced, even, for example: “This will make me look stupid.” In this way,
+          many excuses (standing in for real arguments) lose their power. Excuses conceal objections. Once one excuse is
+          overcome, a second may still block the way to the true, unconfessed objection (which may be perceived as
+          embarrassing).
+        </li>
+        <li> Postponing conflict resolution is often an option. Sometimes only a few minutes suffice.</li>
+      </ul>
+
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>FURTHER READING</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Where can I find more about derivation? How can it go on?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p><b>C.K.W. De Dreu, M.J. Gelfand: </b><br> The psychology of conflict and conflict management in organisations: Communication processes and conflict management, pp. 81-114 
+        <a   href="https://web.stanford.edu/group/resed/resed/staffresources/RM/training/conflict.html"   target="_blank">https://web.stanford.edu/group/resed/resed/staffresources/RM/training/conflict.html</a></p>
+
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>CROSS-REFERENCES</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Where can I get more background information?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-interessenupositionen']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Interests and Positions</div>
+        </ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-gespraechsleitfaden']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">
+            Conversation Guide</div>
+        </ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-moeglichkeitsraum']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">
+            Scope of Conversation</div>
+        </ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-argument']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">
+            Argument
+          </div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-beschwerdemanagement']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">
+            Dealing with Complaints
+          </div>
+        </ion-label>
+      </ion-item>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/home']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/cards']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="logo-buffer"></ion-icon>
+      </ion-button>
+      <ion-button [routerDirection]="'root'" [routerLink]="['/barcode']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="barcode"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

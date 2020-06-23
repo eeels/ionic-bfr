@@ -1,0 +1,277 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="getCurrentLang()=='de'">Steuerungszeichen</ion-title>
+    <ion-title *ngIf="getCurrentLang()=='en'">Steuerungszeichen</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-row *ngIf="textDefault=='notset'" class="ion-padding-vertical" id="notActive"  class="ion-text-center ion-align-items-end ion-justify-content-center ion-padding">
+  <div class="content">
+    <h2>{{ 'needto_activate' | translate }}</h2>
+    <ion-button color="primary" [routerDirection]="'root'" [routerLink]="['/barcode']">
+      <ion-icon name="barcode" style="display: inline-block; margin-right: 0.5em;"></ion-icon>
+      {{ 'menu.activate_pages' | translate }}
+    </ion-button>
+  </div>
+</ion-row>
+<ion-content *ngIf="getCurrentLang()=='de'" [ngClass]="{'offline' :textDefault=='notset'}">
+
+  <img src="/assets/img/karte-steuerungszeichen.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>Ziel</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was kann ich mit diesem Modell erreichen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Sie verkürzen Ihr Manuskript und unterstützen so die freie Rede. Zudem verbessern Sie Ihre Vortragsweise laufend und konzentrieren sich gleichzeitig ganz auf Ihre Redeinhalte.
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was ist die Ausgangslage?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      Manuskripte sind entweder ausführlich, drohen dann aber unübersichtlich zu sein: Der Redner findet das hilfreiche Stichwort nicht ausreichend schnell. Oder einem knappen Manuskript fehlt der entscheidende Hinweis ganz. Bei diesem Dilemma noch Hinweise zum Redestil (etwa an Tipps aus einem Training) zu ergänzen, scheint schier unmöglich.
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>LÖSUNGSANSATZ</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wie komme ich von der Ausgangslage zum Ziel?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+  
+      <p> Die Lösung für knappe, für den Redner aber aussagekräftige Manuskripte, die sogar Regieanweisungen wie „langsamer sprechen“ enthalten können, sind Steuerungszeichen. Dabei geht es nicht um universell gültige Symbole. Jeder Redner kann für sich eine überschaubare Anzahl eigener Bilder wählen, die nur ihm selbst intuitiv verständlich sein müssen. Der Redenschreiber muss sich darüber mit dem Redner austauschen und eher allgemeinverständliche Hinweise aufs Papier bringen. 
+      </p>
+      <p>  Dabei ist es hilfreich, abkürzende Zeichen von Regieanweisungen zu unterscheiden. Abkürzende Zeichen halten die Stichworte übersichtlich. Sie können ausgesprochen werden, wenn etwa eine eckige Klammer drei von fünf Aufzählungspunkten umfasst und damit ausgedrückt wird, dass sie zwar in die gesamte Liste gehören, aber auch Bestandteil eines anderen Aspekts sind.
+      </p>
+      <p> Regieanweisungen hingegen geben dem Redner Hinweise zum Verhalten und bleiben unausgesprochen. Gerade deshalb bieten sich Zeichen hier doppelt an: Das Symbol für Ausatmen auf der Karte (rechte Spalte, dritte Zeile von unten) wird der Vortragende nicht aus Versehen auf der Bühne ausplaudern, anders als vielleicht das Wort „Ausatmen“ im Text. Er wird aber hoffentlich Ausatmen und damit eine Pause machen, Ruhe gewinnen und von Rede zu Rede den Vortragsstil verbessern. Im Extremfall steht auf dem Zettel wenig anderes als eine solche Botschaft an sich selbst aus Trainingszeiten. Die wirkungsmächtigen Teile Ihres Manuskripts wird demnach niemand hören – und jeder positiv wahrnehmen.
+        </p>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        LITERATUR
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p><b>Das haben wir woanders noch nicht gefunden!</b></p>
+
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>QUERVERWEISE</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wo finde ich mehr zur Herleitung? Wie kann es weiter gehen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+     
+      
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-manuskripttechnik']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Manuskripttechnik</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-visualisierungen']">
+ <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Visualisierungen</div>
+        </ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-gliederunguredestruktur']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Gliederung & Redestruktur </div>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>
+<ion-content *ngIf="getCurrentLang()=='en'" [ngClass]="{'offline' :textDefault=='notset'}">
+  <img src="/assets/img/karte-steuerungszeichen.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>Ziel</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was kann ich mit diesem Modell erreichen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Sie verkürzen Ihr Manuskript und unterstützen so die freie Rede. Zudem verbessern Sie Ihre Vortragsweise laufend und konzentrieren sich gleichzeitig ganz auf Ihre Redeinhalte.
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was ist die Ausgangslage?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      Manuskripte sind entweder ausführlich, drohen dann aber unübersichtlich zu sein: Der Redner findet das hilfreiche Stichwort nicht ausreichend schnell. Oder einem knappen Manuskript fehlt der entscheidende Hinweis ganz. Bei diesem Dilemma noch Hinweise zum Redestil (etwa an Tipps aus einem Training) zu ergänzen, scheint schier unmöglich.
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>LÖSUNGSANSATZ</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wie komme ich von der Ausgangslage zum Ziel?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+  
+      <p> Die Lösung für knappe, für den Redner aber aussagekräftige Manuskripte, die sogar Regieanweisungen wie „langsamer sprechen“ enthalten können, sind Steuerungszeichen. Dabei geht es nicht um universell gültige Symbole. Jeder Redner kann für sich eine überschaubare Anzahl eigener Bilder wählen, die nur ihm selbst intuitiv verständlich sein müssen. Der Redenschreiber muss sich darüber mit dem Redner austauschen und eher allgemeinverständliche Hinweise aufs Papier bringen. 
+      </p>
+      <p>  Dabei ist es hilfreich, abkürzende Zeichen von Regieanweisungen zu unterscheiden. Abkürzende Zeichen halten die Stichworte übersichtlich. Sie können ausgesprochen werden, wenn etwa eine eckige Klammer drei von fünf Aufzählungspunkten umfasst und damit ausgedrückt wird, dass sie zwar in die gesamte Liste gehören, aber auch Bestandteil eines anderen Aspekts sind.
+      </p>
+      <p> Regieanweisungen hingegen geben dem Redner Hinweise zum Verhalten und bleiben unausgesprochen. Gerade deshalb bieten sich Zeichen hier doppelt an: Das Symbol für Ausatmen auf der Karte (rechte Spalte, dritte Zeile von unten) wird der Vortragende nicht aus Versehen auf der Bühne ausplaudern, anders als vielleicht das Wort „Ausatmen“ im Text. Er wird aber hoffentlich Ausatmen und damit eine Pause machen, Ruhe gewinnen und von Rede zu Rede den Vortragsstil verbessern. Im Extremfall steht auf dem Zettel wenig anderes als eine solche Botschaft an sich selbst aus Trainingszeiten. Die wirkungsmächtigen Teile Ihres Manuskripts wird demnach niemand hören – und jeder positiv wahrnehmen.
+        </p>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        LITERATUR
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p><b>Das haben wir woanders noch nicht gefunden!</b></p>
+
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>QUERVERWEISE</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wo finde ich mehr zur Herleitung? Wie kann es weiter gehen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+     
+      
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-manuskripttechnik']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Manuskripttechnik</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-visualisierungen']">
+ <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Visualisierungen</div>
+        </ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-gliederunguredestruktur']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Gliederung & Redestruktur </div>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/home']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/cards']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="logo-buffer"></ion-icon>
+      </ion-button>
+      <ion-button [routerDirection]="'root'" [routerLink]="['/barcode']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="barcode"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

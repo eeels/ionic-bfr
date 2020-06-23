@@ -1,0 +1,289 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="getCurrentLang()=='de'">Fünfsatz</ion-title>
+    <ion-title *ngIf="getCurrentLang()=='en'">Rule of Five</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-row *ngIf="textDefault=='notset'" class="ion-padding-vertical" id="notActive"  class="ion-text-center ion-align-items-end ion-justify-content-center ion-padding">
+  <div class="content">
+    <h2>{{ 'needto_activate' | translate }}</h2>
+    <ion-button color="primary" [routerDirection]="'root'" [routerLink]="['/barcode']">
+      <ion-icon name="barcode" style="display: inline-block; margin-right: 0.5em;"></ion-icon>
+      {{ 'menu.activate_pages' | translate }}
+    </ion-button>
+  </div>
+</ion-row>
+<ion-content *ngIf="getCurrentLang()=='de'" [ngClass]="{'offline' :textDefault=='notset'}">
+
+  <img src="/assets/img/karte-fuenfsatz.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>Ziel</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was kann ich mit diesem Modell erreichen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Sie bringen in kurzen Beiträgen von ca. 30 Sekunden Länge wesentliche Inhalte auf den Punkt.
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was ist die Ausgangslage?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      In größeren Besprechungsrunden und kleinen Gesprächskreisen drehen sich viele Beiträge im Kreis, weil der Redner seine Struktur sucht, während er spricht. So droht ein kleiner Ansehensverlust. Und natürlich erreicht die Aussage kaum die Empfänger.
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>LÖSUNGSANSATZ</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wie komme ich von der Ausgangslage zum Ziel?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <p>Der Fünfsatz erlaubt, in kürzester Vorbereitungs- und Redezeit von einem Standpunkt in der Peripherie den Kern zu erreichen. Die Konzeption beginnt beim letzten, auf den Kern zielenden Zwecksatz. Davon ausgehend werden die Begründungen und der Einsatzpunkt in der Sprechsituation festgelegt. Genau dieses gesuchte Verfahren ist der Fünfsatz.
+      </p> <p> Dieses Prinzip erlaubt die unterschiedlichsten Figuren. Vier exemplarische sind unten dargestellt. Diese und weitere Strukturen haben vier zentrale Vorteile:
+      </p> <ol> 
+        <li>	Im fünften, in Ausnahmefällen auch als Frage formulierten, Satz wird die Kurzrede zugespitzt. Sie verliert sich nicht und kommt auf den Punkt. Der Fünfsatz ist redewirksam.
+        </li> <li>Im dreifach gegliederten Mittelteil kann so kurz wie möglich, aber so ausführlich wie nötig, begründet, erläutert, veranschaulicht werden. Dies kann in eine vollständige logische Schlussfigur oder in einen dialektischen Dreischritt eingebunden sein. Der Fünfsatz ist logisch geordnet.
+        </li> <li> Im ersten Satz, sei es durch eine Behauptung oder Frage, kann die Sprechsituation eingefangen, können die Hörer einbezogen, die Gedanken der Vorredner aufgenommen werden. Der Fünfsatz ist situativ gesteuert.
+        </li> <li> 	Die Reduktion verstellt Umwege im Gliedsatzbau und gliedert komplexe Satzstrukturen übersichtlich. Der Fünfsatz fördert die Suche nach dem anschaulichen, treffenden Wort. Der Fünfsatz ist im Sprachstil prägnant.
+        </li>  </ol>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        LITERATUR
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p><b>Wolfgang Mentzel: </b><br> Kommunikation. Rede, Präsentation, Gespräch, Verhandlung, Moderation (S. 45-49)</p>
+      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>QUERVERWEISE</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wo finde ich mehr zur Herleitung? Wie kann es weiter gehen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-beziehungsdreieck']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Redenschreiben – Beziehungsdreieck</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-argument']">
+     <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">
+      Argument
+    </div>
+  </ion-label>
+</ion-item>
+<ion-item [routerDirection]="'root'" [routerLink]="['/karte-senderuempfaenger']">
+  <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+  <ion-label>
+    <div class="item"> Sender & Empfänger     </div>
+  </ion-label>
+</ion-item>
+     
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>
+<ion-content *ngIf="getCurrentLang()=='en'" [ngClass]="{'offline' :textDefault=='notset'}">
+  <img src="/assets/img/karte-rule.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>GOAL</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        What can I achieve with this model?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Briefly, in ca. 30 seconds, you put essential information in a nutshell.
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        What is the situation?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      No matter how large or small the group, contributions to discussions tend to go in circles because the speaker searches for structure while talking. Logical lapses, repetition, and contradictions block the intended message and damage the speaker’s reputation.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>SOLUTION</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        How do I achieve my goals?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+  
+      <p>The Rule of Five will allow you, with minimal preparation and in only a few words, to reach the core of an 
+        issue from a position on the periphery. On the basis of the last (the fifth), core-focused statement, justifications (sentences four to two) and introduction (first sentence) are established in the conversation. This can be achieved in five simple steps.
+      </p>
+      <p>The ‘Rule of Five’ method can take a variety of forms. Four examples are illustrated below. These and similar structures have four central advantages: 
+      </p>
+      <p> In the first sentence, a statement or a question allows the conversation to be reined in, listeners to be involved, and the thoughts of a previous speaker to be integrated. The five points are guided by the situation. 
+      </p>
+      <p>  The job of the middle section, divided into three parts, is to justify, explain, and illustrate. It should be as brief as possible but as extensive as necessary. It can be structured as a complete logical chain or as a three-part dialectical process. The five points are ordered logically.
+      </p>
+      <p> In the fifth sentence, which in exceptional cases can be formulated as a question, the short speech is brought to a forceful finish. It does not trail off, and it comes to the point. The five points are persuasive.
+      </p>
+      <p>  The reduction inhibits detours in the organization of sentence structure and arranges complex syntax clearly. The five-point structure facilitates the search for the appropriate descriptive word. The five points are stylistically powerful.
+         </p>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>FURTHER READING</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+      Where can I find more about derivation? How can it go on?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+     <p><b>We didn’t find anything in English. Wolfgang Mentzel: </b><br>Kommunikation. Rede, Präsentation, Gespräch, Verhandlung, Moderation (pp. 45-49) </p>
+    
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>CROSS-REFERENCES</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+       Where can I get more background information?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-beziehungsdreieck']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Speechwriting – Relationship Triangle</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-argument']">
+     <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">
+      Argument
+    </div>
+  </ion-label>
+</ion-item>
+<ion-item [routerDirection]="'root'" [routerLink]="['/karte-senderuempfaenger']">
+  <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+  <ion-label>
+    <div class="item"> Sender & Receiver     </div>
+  </ion-label>
+</ion-item>
+     
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/home']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/cards']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="logo-buffer"></ion-icon>
+      </ion-button>
+      <ion-button [routerDirection]="'root'" [routerLink]="['/barcode']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="barcode"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

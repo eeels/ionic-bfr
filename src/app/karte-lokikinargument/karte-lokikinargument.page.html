@@ -1,0 +1,286 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="getCurrentLang()=='de'">Logik in Argument und Argumentation</ion-title>
+    <ion-title *ngIf="getCurrentLang()=='en'">Logic of Argument and Argumentation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-row *ngIf="textDefault=='notset'" class="ion-padding-vertical" id="notActive"  class="ion-text-center ion-align-items-end ion-justify-content-center ion-padding">
+  <div class="content">
+    <h2>{{ 'needto_activate' | translate }}</h2>
+    <ion-button color="primary" [routerDirection]="'root'" [routerLink]="['/barcode']">
+      <ion-icon name="barcode" style="display: inline-block; margin-right: 0.5em;"></ion-icon>
+      {{ 'menu.activate_pages' | translate }}
+    </ion-button>
+  </div>
+</ion-row>
+<ion-content *ngIf="getCurrentLang()=='de'" [ngClass]="{'offline' :textDefault=='notset'}">
+
+  <img src="/assets/img/karte-lokikinargument.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>Ziel</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was kann ich mit diesem Modell erreichen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Sie bauen Argumentationen in der Wahrnehmung des Adressaten verständlich und außerordentlich überzeugend auf – und profitieren davon, dass Ihre Logik auch intensiver Prüfung standhält.
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was ist die Ausgangslage?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Statt zu argumentieren listen Autoren und Redner einfach Punkte auf, die ihrer Meinung nach für die eigene Sache sprechen. Diese Punkte stehen in weitgehend willkürlicher Reihenfolge. Und wenn doch logische Stringenz gelingt, wird die Botschaft schwer verständlich.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>LÖSUNGSANSATZ</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wie komme ich von der Ausgangslage zum Ziel?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+
+      <p>Ihre finale Konklusion, die Kernbotschaft, steht an der Spitze einer Pyramide. Diese wird von Prämissen,
+        also Ihren Annahmen, gestützt. An diese Ebene können mit den „GÜTE“-Kriterien hohe Anforderungen gestellt werden, um die Argumentation noch standfester zu machen: Prämissen sind gleichartig, überschneidungsfrei, treffend und erschöpfend.
+       Jede der Prämissen kann durch weitere Prämissen gestützt werden. So lässt sich die Pyramide theoretisch endlos in die Tiefe weiterdenken. Praktisch reichen zumeist die drei unten dargestellten Ebenen.
+       Bei der Verbindung der Konklusion mit den dazugehörigen Prämissen sind zwei logische Prinzipien möglich:
+      </p>
+   <ol><li>	Bilden die Sätze der Prämisse 1 mit der Konklusion eine Gruppe, die Gedanken der Prämisse 2 mit derselben Konklusion eine zweite Gruppe usw., argumentieren Sie induktiv. Die Prämissen stehen nebeneinander. 
+      </li><li>Schwieriger ist, die Prämissen einer Ebene in eine zwingende Reihenfolge, eine Kette, zu bringen (Prämisse 1: Alle Menschen sind sterblich; Prämisse 2: Sokrates ist ein Mensch; Konklusion: Sokrates ist sterblich). Sie gehen deduktiv vor. Der Mehrwert ist dabei eine weitere logische Verstrebung. Besser kann man kaum argumentieren.
+      </li></ol>
+      <p> Eine Kombination von Deduktion und Induktion ist denkbar. Immer aber gilt: Die Pyramide ist zwei- dimensional, die Redereihenfolge eindimensional: ein Gedanke kommt nach dem anderen. Und doch 
+       hat jede Aussage unmittelbaren Bezug zum Kerngedanken, der finalen Konklusion.
+       </p>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        LITERATUR
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p><b>Barbara Minto: </b><br>Das Prinzip der Pyramide</p>
+
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>QUERVERWEISE</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wo finde ich mehr zur Herleitung? Wie kann es weiter gehen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+    
+      
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-gradderschlussfolgerung']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Grad der Schlussfolgerung</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-argument']">
+  <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">  Argument</div>
+        </ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-argumentation']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Argumentation</div>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>
+<ion-content *ngIf="getCurrentLang()=='en'" [ngClass]="{'offline' :textDefault=='notset'}">
+  <img src="/assets/img/karte-logic.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>GOAL</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        What can I achieve with this model?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      You construct chains of argumentation in a way that is intelligible and extraordinarily convincing to your audience – and benefit from how well your logic withstands intense scrutiny.
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        What is the situation?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Instead of crafting arguments, writers and speakers tend to list off points that, in their view, substantiate their case. These points are usually made in no particular order. And even when they are tied together logically, the larger message remains difficult to understand.
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>SOLUTION</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        How do I achieve my goals?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+   
+      <p> The final conclusion, the central message you want to communicate, stands atop a pyramid. This pyramid 
+        is founded on premises, that is on your assumptions. At this level, high demands can be made with quality criteria, in order to make the argumentation firmer still. The premises are mutually exclusive and collectively exhaustive (MECE).
+        Each of the premises can be supported by further premises, such that the pyramid could theoretically be built up indefinitely. In practice, it usually suffices to have the three levels depicted below.
+        When tying the conclusion to its corresponding premises, two logical principles are possible:
+      </p>
+      <ol><li>	If the statements of Premise 1 and the Conclusion comprise one group, and the thoughts of Premise 2 and the same Conclusion comprise a second group, etc., you are arguing inductively. The premises are lined up next to one another. 
+      </li><li>	It is more difficult to put the premises of one level into a compelling order, a chain (Premise 1: all human beings are mortal; Premise 2: Socrates is a human being; Conclusion: Socrates is mortal). 
+        This is deductive reasoning. The bonus: additional logical reinforcement. There is hardly a better
+         way to argue. </li></ol>
+        It is possible to combine deduction and induction. But remember, the pyramid is always two-dimensional, the order in which the arguments are made one-dimensional: one thought follows another, but each statements is also related directly to the central thought, the final conclusion.
+     
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>FURTHER READING</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+      Where can I find more about derivation? How can it go on?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+     <p><b>Barbara Minto: </b><br> Pyramid Principle</p>
+    
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>CROSS-REFERENCES</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+       Where can I get more background information?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+    
+      
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-gradderschlussfolgerung']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Degree of Conclusion </div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-argument']">
+  <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">  Argument</div>
+        </ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-argumentation']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Argumentation</div>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/home']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/cards']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="logo-buffer"></ion-icon>
+      </ion-button>
+      <ion-button [routerDirection]="'root'" [routerLink]="['/barcode']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="barcode"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

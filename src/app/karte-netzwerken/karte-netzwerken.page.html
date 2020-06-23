@@ -1,0 +1,313 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="getCurrentLang()=='de'">Netzwerken</ion-title>
+    <ion-title *ngIf="getCurrentLang()=='en'">Netzwerken</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-row *ngIf="textDefault=='notset'" class="ion-padding-vertical" id="notActive"  class="ion-text-center ion-align-items-end ion-justify-content-center ion-padding">
+  <div class="content">
+    <h2>{{ 'needto_activate' | translate }}</h2>
+    <ion-button color="primary" [routerDirection]="'root'" [routerLink]="['/barcode']">
+      <ion-icon name="barcode" style="display: inline-block; margin-right: 0.5em;"></ion-icon>
+      {{ 'menu.activate_pages' | translate }}
+    </ion-button>
+  </div>
+</ion-row>
+<ion-content *ngIf="getCurrentLang()=='de'" [ngClass]="{'offline' :textDefault=='notset'}">
+
+  <img src="/assets/img/karte-netzwerken.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>Ziel</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was kann ich mit diesem Modell erreichen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Sie können sich und anderen in immer mehr Feldern Unterstützung organisieren. Dadurch sind Sie 
+      für viele (und: immer mehr) Personen ein wichtiger Kontakt im Netzwerk.
+      
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was ist die Ausgangslage?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      Wer seine Kontakte professionell suchen und pflegen möchte, bewegt sich wahrscheinlich am Ende 
+      doch immer in denselben Kreisen, in denen jeder jeden kennt und der Mehrwert des Netzwerkens überschaubar bleibt.
+      
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>LÖSUNGSANSATZ</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wie komme ich von der Ausgangslage zum Ziel?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+  
+      <p> Je größer die Familie oder je enger der Freundeskreis, desto bekannter das Phänomen: Wer eine Person aus dieser Gruppe länger nicht gesprochen hat, weiß wahrscheinlich doch, wie es ihr geht. Denn andere Kontakte haben berichtet. Andere Verbindungen stützen so den direkten Link zwischen Verwandten oder Freunden, auch wenn diese lange keinen Kontakt hatten. Das zeichnet eine starke Verbindung aus und ist ein Grund dafür, dass sich die meisten Menschen unter ihresgleichen treffen: Man kennt sich aus der Ausbildung, der Nachbarschaft usw. und nutzt große Schnittflächen bei Interessen und Alltagsproblemen.
+      </p>
+      <p>Für den strategischen Ausbau des Netzwerks und die systematische Verbesserung der eigenen Position in den Netzwerken anderer, sind die schwachen Verbindungen mächtiger. Eine schwache Verbindung wird zwar nicht von anderen, gemeinsamen Kontakten abgesichert. Der Vorteil aber: Sie bildet eine Brücke in eine andere Gruppe und damit einen Anschluss in ein anderes Teilnetzwerk, nicht nur für die direkt Verbundenen allein. Die Knotenpunkte steigern ihre Bedeutung im Netzwerk, indem sie die seltene Querung auch anderen anbieten.
+      </p>
+      <p> Ein Beispiel für das Phänomen: Wenige Philosophieprofessoren kennen einen Heizungsinstallateur enger. Diesen Kontakt zu halten, ist für beide aufwändig, denn zufällige Begegnungen und leichte Anknüpfungspunkte an Themen des anderen sind selten. Genau dieser Kontakt aber lohnt – nicht erst, wenn der Installateur neue Kunden sucht oder beim Professor die Heizung leckt, sondern schon, wenn das beim Nachbarn passiert.  
+        </p>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        LITERATUR
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p><b>Jens Beckert:  </b><br> Soziologische Netzwerkanalyse.</p>
+      <p><b>Dirk Kaesler (Hrsg.): </b><br>  Aktuelle Theorien der Soziologie. Vom Shmuel N. Eisenstadt bis zur Postmoderne</p>
+
+      <p><b>Ein Beispiel aus dem Jahr 2017:  </b> <br> The paradox of weak ties in 55 countries <a href="https://www.sciencedirect.com/science/article/pii/S0167268116302864"
+          target="_blank">https://www.sciencedirect.com/science/article/pii/S0167268116302864</a></p>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>QUERVERWEISE</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wo finde ich mehr zur Herleitung? Wie kann es weiter gehen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      
+      
+      
+       
+      
+
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-senderuempfaenger']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Sender & Empfänger</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-empfehlungsdreieck']">
+       <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Empfehlungsdreieck</div>
+        </ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-gespraechsleitfaden']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Gesprächsleitfaden</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-moeglichkeitsraum']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Möglichkeitsraum in einem Gespräch</div>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>
+<ion-content *ngIf="getCurrentLang()=='en'" [ngClass]="{'offline' :textDefault=='notset'}">
+  <img src="/assets/img/karte-netzwerken.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>Ziel</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was kann ich mit diesem Modell erreichen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Sie können sich und anderen in immer mehr Feldern Unterstützung organisieren. Dadurch sind Sie 
+      für viele (und: immer mehr) Personen ein wichtiger Kontakt im Netzwerk.
+      
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was ist die Ausgangslage?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      Wer seine Kontakte professionell suchen und pflegen möchte, bewegt sich wahrscheinlich am Ende 
+      doch immer in denselben Kreisen, in denen jeder jeden kennt und der Mehrwert des Netzwerkens überschaubar bleibt.
+      
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>LÖSUNGSANSATZ</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wie komme ich von der Ausgangslage zum Ziel?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+  
+      <p> Je größer die Familie oder je enger der Freundeskreis, desto bekannter das Phänomen: Wer eine Person aus dieser Gruppe länger nicht gesprochen hat, weiß wahrscheinlich doch, wie es ihr geht. Denn andere Kontakte haben berichtet. Andere Verbindungen stützen so den direkten Link zwischen Verwandten oder Freunden, auch wenn diese lange keinen Kontakt hatten. Das zeichnet eine starke Verbindung aus und ist ein Grund dafür, dass sich die meisten Menschen unter ihresgleichen treffen: Man kennt sich aus der Ausbildung, der Nachbarschaft usw. und nutzt große Schnittflächen bei Interessen und Alltagsproblemen.
+      </p>
+      <p>Für den strategischen Ausbau des Netzwerks und die systematische Verbesserung der eigenen Position in den Netzwerken anderer, sind die schwachen Verbindungen mächtiger. Eine schwache Verbindung wird zwar nicht von anderen, gemeinsamen Kontakten abgesichert. Der Vorteil aber: Sie bildet eine Brücke in eine andere Gruppe und damit einen Anschluss in ein anderes Teilnetzwerk, nicht nur für die direkt Verbundenen allein. Die Knotenpunkte steigern ihre Bedeutung im Netzwerk, indem sie die seltene Querung auch anderen anbieten.
+      </p>
+      <p> Ein Beispiel für das Phänomen: Wenige Philosophieprofessoren kennen einen Heizungsinstallateur enger. Diesen Kontakt zu halten, ist für beide aufwändig, denn zufällige Begegnungen und leichte Anknüpfungspunkte an Themen des anderen sind selten. Genau dieser Kontakt aber lohnt – nicht erst, wenn der Installateur neue Kunden sucht oder beim Professor die Heizung leckt, sondern schon, wenn das beim Nachbarn passiert.  
+        </p>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        LITERATUR
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p><b>Jens Beckert:  </b><br> Soziologische Netzwerkanalyse.</p>
+      <p><b>Dirk Kaesler (Hrsg.): </b><br>  Aktuelle Theorien der Soziologie. Vom Shmuel N. Eisenstadt bis zur Postmoderne</p>
+
+      <p><b>Ein Beispiel aus dem Jahr 2017:  </b> <br> The paradox of weak ties in 55 countries <a href="https://www.sciencedirect.com/science/article/pii/S0167268116302864"
+          target="_blank">https://www.sciencedirect.com/science/article/pii/S0167268116302864</a></p>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>QUERVERWEISE</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wo finde ich mehr zur Herleitung? Wie kann es weiter gehen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      
+      
+      
+       
+      
+
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-senderuempfaenger']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Sender & Empfänger</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-empfehlungsdreieck']">
+       <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Empfehlungsdreieck</div>
+        </ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-gespraechsleitfaden']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">karte-gespraechsleitfaden</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-moeglichkeitsraum']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Möglichkeitsraum in einem Gespräch</div>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/home']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/cards']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="logo-buffer"></ion-icon>
+      </ion-button>
+      <ion-button [routerDirection]="'root'" [routerLink]="['/barcode']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="barcode"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

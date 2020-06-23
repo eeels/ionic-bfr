@@ -1,0 +1,282 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="getCurrentLang()=='de'">Argumentation</ion-title>
+    <ion-title *ngIf="getCurrentLang()=='en'">Argumentation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-row *ngIf="textDefault=='notset'" class="ion-padding-vertical" id="notActive"  class="ion-text-center ion-align-items-end ion-justify-content-center ion-padding">
+  <div class="content">
+    <h2>{{ 'needto_activate' | translate }}</h2>
+    <ion-button color="primary" [routerDirection]="'root'" [routerLink]="['/barcode']">
+      <ion-icon name="barcode" style="display: inline-block; margin-right: 0.5em;"></ion-icon>
+      {{ 'menu.activate_pages' | translate }}
+    </ion-button>
+  </div>
+</ion-row>
+<ion-content *ngIf="getCurrentLang()=='de'" [ngClass]="{'offline' :textDefault=='notset'}">
+
+  <img src="/assets/img/karte-argumentation.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>Ziel</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was kann ich mit diesem Modell erreichen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+     <p> Sie können Argumente logisch zu Argumentationen verknüpfen. Dadurch stellen Sie auch längere Gedankengänge und komplexe Zusammenhänge logisch stringent und verständlich dar. Häufig wird Ihr Standpunkt erst durch eine geschickte Verknüpfung mehrerer Argumente stichhaltig.</p>
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was ist die Ausgangslage?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      <p>Ein Argument logisch aufzubauen ist schwierig. Argumente korrekt und zuhörerorientiert zu verknüpfen, ist ohne Vorkenntnis noch komplexer. Daher stehen Argumente häufig einfach nebeneinander. Die Folgen: die Gewichtung bleibt willkürlich, das Kontra beliebig und die erneute Verteidigung unscharf.</p>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>LÖSUNGSANSATZ</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wie komme ich von der Ausgangslage zum Ziel?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <p> Ein Argument besteht aus mindestens zwei Aussagen, die in einem Begründungszusammenhang stehen, wie die Karte „Argument“ darstellt. Dabei dient mindestens eine Aussage als Prämisse, eine andere als Schlussfolgerung daraus, also als Konklusion.
+      </p>
+      <p> Ob eine Aussage die Funktion einer Prämisse übernimmt, oder die einer Konklusion, ergibt sich ausschließlich aus dem Zusammenhang. Die Aussage „Dieser Vorschlag ist hilfreich!“ kann die Konklusion sein zur Prämisse „Das kann funktionieren.“ Aber sie kann auch die Prämisse sein für die Konklusion: „Wir sollten ihn umgehend und eingehend prüfen.“ Und sie kann beides sein, wenn sie in der Grafik auf der Karte im Feld „Konklusion 1“ steht. Damit sind zwei Argumente zu einer (rudimentären) Argumentation verknüpft.</p>
+      <p> Daraus ergeben sich zwei weitere, in der Praxis wertvolle, Gedanken. Erstens müssen Argumente nicht in jedem Fall nebeneinander stehen. Vielmehr ist es jetzt möglich, die Beziehung der Argumente zueinander 
+        zu prüfen. 
+        
+      </p>
+      <p>Zweitens können etwaige Angriffe genauer verortet werden: zielt das Kontra auf eine Konklusion? Oder auf eine Prämisse (bei mehreren: auf welche)? Wenn jemand im gegebenen Beispiel antwortet: „Wir sollten den Vorschlag nicht sofort prüfen.“ bedeutet das nicht zwingend, dass der Sprecher den Vorschlag an sich für wenig hilfreich hält. Dass er die Prämisse nicht teilt. Vielleicht glaubt er nur, dass der Vorschlag nicht weiter geprüft, sondern sofort umgesetzt werden sollte. Dass aus der Prämisse eine andere Schlussfolgerung zu ziehen ist. In diesem Fall wäre es sinnvoll, über die Konklusion zu reden, und nicht über die Prämisse. Man streitet über den relevanten Aspekt.</p>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        LITERATUR
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p><b>Klaus Bayer:</b><br> Argument und Argumentation. Logische Grundlagen der Argumentationsanalyse </p>
+      <p><b>Colin Swatridge:</b><br> Oxford Guide to Effective Argument and Critical Thinking </p>
+     
+ 
+          
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>QUERVERWEISE</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wo finde ich mehr zur Herleitung? Wie kann es weiter gehen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-gradderschlussfolgerung']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Grad der Schlussfolgerung</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-lokikinargument']">
+      <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Logik in Argument und Argumentation</div>
+        </ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-argument']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Argument</div>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>
+<ion-content *ngIf="getCurrentLang()=='en'" [ngClass]="{'offline' :textDefault=='notset'}">
+
+  <img src="/assets/img/karte-argumentationeng.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>GOAL</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        What can I achieve with this model?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+   <p>You can logically combine individual arguments to form chains of argumentation. In this way, you rigorously and intelligibly portray longer trains of thought and complex relationships, make objections more pointedly, and defend your position compellingly.</p>
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        What is the situation?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      <p> It is difficult to construct an argument logically. Without prior knowledge, it is even more complicated to string arguments together correctly and in a way that is tailored to your audience. Thus arguments are often simply lined up next to one another. As a result, the importance ascribed to each one remains arbitrary, counterarguments can be made at will, and a renewed defense seems unfocused.
+        
+      </p>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>SOLUTION</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        How do I achieve my goals?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <p>  An argument consists of at least two statements that, together, are meant to justify a certain point, as shown on the “Argument” card. At least one statement functions as a premise, whereas another, the conclusion, makes a deduction from the premise(s).
+      </p> <p> Whether a statement functions as a premise or a conclusion depends entirely on context. The statement, “This suggestion is helpful!,” can be the conclusion to the premise, “It can work.” Yet it can also be the premise to the conclusion, “We should consider it immediately and comprehensively.” And it can be both, 
+      if it occupies the place of “Conclusion 1” in the graphic on the card. In that depiction, two arguments are combined to form a (rudimentary) chain of argumentation.
+    </p> <p>This insight yields two further observations of practical value. First, arguments do not always need to be 
+      lined up next to one another. Rather it is now possible to examine the relationship between the arguments. 
+    </p><p> Second, the object of eventual attacks can be precisely identified. Does the counterargument take aim at a conclusion? Or at a premise (in the case of several premises, which one)? If, in the situation described above, someone answers, “We should not immediately consider the suggestion,” it does not mean that the speaker considers the suggestion itself unhelpful – that is, that he does not share the premise. Perhaps he believes 
+      that the suggestion does not need to be considered further but rather immediately implemented – that is, that another conclusion should be drawn from the premise. In that case, it would make sense to speak about the conclusion, and not about the premise. The dispute is about the aspect actually challenged by the other.
+    </p>
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>FURTHER READING</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+      Where can I find more about derivation? How can it go on?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+     <p><b>Colin Swatridge: </b><br> Oxford Guide to Effective Argument and Critical Thinking (Oxford Guides)</p>
+    
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>CROSS-REFERENCES</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+       Where can I get more background information?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-gradderschlussfolgerung']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Degree of Conclusion</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-lokikinargument']">
+       <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Logic of Argument and Argumentation</div>
+        </ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-argument']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Argument</div>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/home']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/cards']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="logo-buffer"></ion-icon>
+      </ion-button>
+      <ion-button [routerDirection]="'root'" [routerLink]="['/barcode']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="barcode"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

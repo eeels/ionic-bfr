@@ -1,0 +1,300 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="getCurrentLang()=='de'">Interessen und Positionen</ion-title>
+    <ion-title *ngIf="getCurrentLang()=='en'">Interests and Positions</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-row *ngIf="textDefault=='notset'" class="ion-padding-vertical" id="notActive"  class="ion-text-center ion-align-items-end ion-justify-content-center ion-padding">
+  <div class="content">
+    <h2>{{ 'needto_activate' | translate }}</h2>
+    <ion-button color="primary" [routerDirection]="'root'" [routerLink]="['/barcode']">
+      <ion-icon name="barcode" style="display: inline-block; margin-right: 0.5em;"></ion-icon>
+      {{ 'menu.activate_pages' | translate }}
+    </ion-button>
+  </div>
+</ion-row>
+<ion-content *ngIf="getCurrentLang()=='de'" [ngClass]="{'offline' :textDefault=='notset'}">
+
+  <img src="/assets/img/karte-interessenupositionen.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>Ziel</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was kann ich mit diesem Modell erreichen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Sie finden in fast allen Verhandlungen und ausgebrochenen Konflikten Lösungsansätze und führen sie zu einer für alle Beteiligten tragbaren oder gar zufriedenstellenden Lösung.
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was ist die Ausgangslage?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      Wenn zwei oder mehr Parteien glauben, Unvereinbares zu wollen, verhärten sich schnell die Meinungen und Forderungen. Alle wollen gewinnen. Selbst lösbare Konflikte eskalieren.
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>LÖSUNGSANSATZ</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wie komme ich von der Ausgangslage zum Ziel?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+   
+      <p>Zentral ist die Unterscheidung von Positionen und Interessen. Eine Position ist das Geforderte – das Was („Was will ich haben?“). Interessen sind die Gedanken dahinter – das Warum („Warum will ich das?“). Der Clou: Interessen sind sehr viel häufiger miteinander kompatibel als Positionen. Dennoch ist man sich der eigenen Interessen oft nicht bewusst, weil das Erreichen der Position im Vordergrund steht. Und selbst wenn jemand über seine Interessen reflektiert, sieht er vielleicht nur die eine Position, obwohl es auch andere Möglichkeiten gäbe. 
+      </p>
+      <p>So mag ein amerikanisches Unternehmen sein technisch führendes Computerprogramm für Makler auch in Europa verkaufen wollen. Dafür soll der europäische Marktführer für Immobiliensoftware eine Lizenz erhalten wie andere Vertriebe evtl. auch. Der potenzielle Lizenznehmer verhandelt aber ausschließlich über Exklusivrechte. Die Positionen sind unvereinbar: exklusiv und nicht exklusiv gehen nicht zusammen. Bei einer Einigung z.B. über Laufzeiten ist keiner wirklich glücklich. Oder: Die Gespräche scheitern.
+      </p>
+      <p>Eine bessere Lösung ermöglicht der Fokus auf Interessen. Der Lizenzgeber möchte sich gegen zu niedrige Verkaufszahlen absichern. Dem Lizenznehmer helfen Exklusivrechte beim Verkauf. Beide wollen das gleiche: schnell viel Umsatz. Lösungen ergeben sich vielleicht, wenn beide auch über Zielgrößen verhandeln, über kontinentale Software- und Vertragsadaptionen usw. 
+      </p>
+      <p> Im Beispiel der Grafik überbieten sich zwei Einkäufer beim Kauf von Orangen. Die Positionen: die ganze Lieferung und natürlich die ganze Frucht. Die Interessen aber sind kompatibel: Das eine Unternehmen braucht die Öle der Schale, das andere den Saft.
+        </p>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        LITERATUR
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p><b>Roger Fisher, William Ury, Bruce Patton, Das Harvard-Konzept: </b><br> Der Klassiker der Verhandlungstechnik</p>
+  
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>QUERVERWEISE</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wo finde ich mehr zur Herleitung? Wie kann es weiter gehen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-konfliktbewaeltigung']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Konfliktbewältigung</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-gespraechsleitfaden']">
+   <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> 
+      Gesprächsleitfaden</div>
+    </ion-label>
+  </ion-item>
+  <ion-item [routerDirection]="'root'" [routerLink]="['/karte-moeglichkeitsraum']">
+<ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+    <ion-label>
+      <div class="item"> 
+      Möglichkeitsraum in einem Gespräch</div>
+    </ion-label>
+  </ion-item>
+  <ion-item [routerDirection]="'root'" [routerLink]="['/karte-senderuempfaenger']">
+<ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+    <ion-label>
+      <div class="item"> 
+      Sender & Empfänger</div>
+    </ion-label>
+  </ion-item>
+ 
+      
+    </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>
+<ion-content *ngIf="getCurrentLang()=='en'" [ngClass]="{'offline' :textDefault=='notset'}">
+  <img src="/assets/img/karte-interests.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>GOAL</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        What can I achieve with this model?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      You will find avenues for solving problems in negotiations and conflicts, and you will guide these situations to a resolution that is acceptable or even satisfactory to all involved.
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        What is the situation?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      When two or more parties believe that their goals are incompatible, they quickly become hardened in their positions, opinions, and demands. Everyone wants to win, to save face. Even resolvable conflicts escalate; the pursuit of power dominates.
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>SOLUTION</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        How do I achieve my goals?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+   
+      <p>The difference between positions and interests is of central importance. The term ‘position’ applies to specific demands: the what. ‘Interests,’ on the other hand, refer to thoughts, motives, and goals: the why. They key is to realize that interests are thus much more compatible with one another than positions. Once a position has been taken, we become less conscious of our interests. We risk coming to an impasse. By reflecting consciously on the why, however, we can get past a hardened position and see alternative possibilities. 
+      </p>
+      <p>  Say an American company wants to sell its cutting-edge computer program for realtors in Europe. It plans to offer a license to the European market leader in real estate software, but perhaps also to other companies. The potential licensee, however, is only willing to negotiate for exclusive rights. The positions are incompatible: exclusive and non-exclusive do not go together. An agreement over a fixed term for exclusive rights, for example, doesn’t make anyone truly happy. In the worst case, the negotiations fail.
+      </p>
+      <p> A better solution is possible if the focus is placed on interests. The licensor wants to safeguard against low sales figures. The licensee can sell more with exclusive rights. Both want the same thing: high sales figures, and fast. Solutions might present themselves if both parties negotiated about target figures, continental software and contract adaptation, etc. 
+      </p>
+      <p>  In the example pictured below, two parties are vying for an orange. Both want the whole fruit. If they talk about their interests, the situation becomes resolvable without compromise: One party wants to produce juice, the other to make cosmetics from the peel.
+         </p>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>FURTHER READING</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+      Where can I find more about derivation? How can it go on?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+     <p><b>Roger Fisher, William Ury, Bruce Patton: </b><br> Getting  to Yes</p>
+    
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>CROSS-REFERENCES</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+       Where can I get more background information?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-konfliktbewaeltigung']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Conflict Resolution</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-gespraechsleitfaden']">
+   <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> 
+            Conversation Guide</div>
+    </ion-label>
+  </ion-item>
+  <ion-item [routerDirection]="'root'" [routerLink]="['/karte-moeglichkeitsraum']">
+<ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+    <ion-label>
+      <div class="item"> 
+        Scope of Conversation</div>
+    </ion-label>
+  </ion-item>
+  <ion-item [routerDirection]="'root'" [routerLink]="['/karte-senderuempfaenger']">
+<ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+    <ion-label>
+      <div class="item"> 
+        Sender & Receiver</div>
+    </ion-label>
+  </ion-item>
+ 
+      
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/home']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/cards']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="logo-buffer"></ion-icon>
+      </ion-button>
+      <ion-button [routerDirection]="'root'" [routerLink]="['/barcode']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="barcode"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

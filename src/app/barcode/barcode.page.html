@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="getCurrentLang()=='de'">Neue Karten anlegen</ion-title>
+    <ion-title *ngIf="getCurrentLang()=='en'">Unlock new cards</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="getCurrentLang()=='de'">
+  <ion-row class="ion-padding ion-text-center ion-align-items-center ion-justify-content-center height-100">
+   <div> <h1>Jetzt Ihre Karten freischalten!</h1>
+   
+      <ion-button (click)="scanCode()"  fill="outline">
+        <ion-icon   slot="start" name="barcode"></ion-icon>  Scan Code
+      </ion-button>
+      <div *ngIf="textDefault" [innerHTML]="textDefault" class="ion-padding-vertical"> </div>
+      <ion-button *ngIf="btnRoute" [routerDirection]="'root'" [routerLink]="btnRoute"  fill="outline" >
+        zur Seite wechseln
+      </ion-button>
+    </div>
+  </ion-row>
+</ion-content>
+
+
+<ion-content class="ion-padding ion-text-center ion-align-items-center ion-justify-content-center height-100"
+  *ngIf="getCurrentLang()=='en'">
+  <div>
+    <h1>Unlock your cards!</h1>
+
+    <ion-button (click)="scanCode()" fill="outline">
+      <ion-icon name="barcode"  slot="start"></ion-icon>  Scan Code
+    </ion-button>
+    <div *ngIf="textDefault" [innerHTML]="textDefault" class="ion-padding-vertical"> </div>
+    <ion-button *ngIf="btnRoute" [routerDirection]="'root'" [routerLink]="btnRoute" fill="outline">
+      get your page
+    </ion-button>
+  </div>
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button [routerDirection]="'root'" [routerLink]="['/home']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+      <ion-button [routerDirection]="'root'" [routerLink]="['/cards']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="logo-buffer"></ion-icon>
+      </ion-button>
+      <ion-button [routerDirection]="'root'" [routerLink]="['/barcode']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="barcode"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

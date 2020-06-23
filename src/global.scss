@@ -1,0 +1,91 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+body, ion-app, ion-content, .modal-wrapper, .ion-page, .inner-scroll {
+  background:#F4F4F6!important; color:#454F63
+  }
+--ion-background-color {
+  background: #F4F4F6 !important;
+  }
+
+  ion-content {
+    --background: #F4F4F6; // you don't need to use a css custom property, but you can of course
+    }
+
+#notActive {position: absolute; top:0; left:0; right:0; bottom: 0; background: #ccc; z-index: 1;
+background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.02) 1%,rgba(255,255,255,1) 58%,rgba(255,255,255,1) 100%) !important;
+}
+
+ion-content.offline{filter: blur(2px);}
+
+
+.height-100{ height: 100vh;}
+
+.full{margin: 10px -10px 20px -10px ;}
+.menu-list-item{padding: 5px 0;}
+//font-family: 'Oxygen', sans-serif;
+  @font-face {
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/assets/fonts/Oxygen-Regular.ttf');
+  }
+  
+  //font-family: 'Oxygen', sans-serif;
+  @font-face {
+    font-family: 'Bai Jamjuree';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/assets/fonts/BaiJamjuree-Medium.ttf');
+  }
+  h1 {   font-family: 'Bai Jamjuree';}
+
+  ion-menu {
+   
+  
+    ion-toolbar {
+      --background: var(--ion-color-primary);
+    }
+  
+    ion-list {/* optional, but it needs when you use gradient as a background color.*/
+      background: transparent;
+    }
+  }
+
+
+  .active , ion-button:active{ 
+   color:var(--ion-color-primary)}
+
+
+   ion-footer ion-button{ 
+    color:var(--ion-color-secondary)}
+
+   ion-footer   ion-toolbar  ion-buttons {display: flex; justify-content: space-between;}
+   ion-footer   ion-toolbar  ion-buttons ion-button {margin: 0 2em !important;}
+
+
+

@@ -1,0 +1,298 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="getCurrentLang()=='de'">Entscheidungskompetenz</ion-title>
+    <ion-title *ngIf="getCurrentLang()=='en'">Entscheidungskompetenz</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-row *ngIf="textDefault=='notset'" class="ion-padding-vertical" id="notActive"  class="ion-text-center ion-align-items-end ion-justify-content-center ion-padding">
+  <div class="content">
+    <h2>{{ 'needto_activate' | translate }}</h2>
+    <ion-button color="primary" [routerDirection]="'root'" [routerLink]="['/barcode']">
+      <ion-icon name="barcode" style="display: inline-block; margin-right: 0.5em;"></ion-icon>
+      {{ 'menu.activate_pages' | translate }}
+    </ion-button>
+  </div>
+</ion-row>
+<ion-content *ngIf="getCurrentLang()=='de'" [ngClass]="{'offline' :textDefault=='notset'}">
+
+  <img src="/assets/img/karte-entscheidungskompetenz.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>Ziel</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was kann ich mit diesem Modell erreichen? 
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>Sie treffen bessere Entscheidungen. Und manchmal auch schnellere. Denn Sie wissen, wann sich das Denken lohnt und wann Sie auf Ihr Gefühl hören sollten.
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was ist die Ausgangslage?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Wir treffen ungezählte falsche Entscheidungen. Die meisten davon wegen einfacher Denkfehler. Und viele, obwohl uns die Sache wichtig ist.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>LÖSUNGSANSATZ</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wie komme ich von der Ausgangslage zum Ziel?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <p> Denken ist anstrengend. Und braucht Zeit. Wir sollten nur dann überlegen, wenn sich der Aufwand wahrscheinlich auszahlt. Tatsächlich treffen wir die meisten Entscheidungen weitgehend gedankenlos, vom Brotaufstrich beim Frühstück bis zum Fernsehprogramm am Abend. Dann wieder grübeln wir Wochen über den richtigen Toaster oder den besten Fernseher. Die Herausforderung ist also, schnell zu erkennen, ob Reflexion lohnt. Das gelingt in drei Schritten:
+      </p>
+      <ol>
+        <li>Sind die Folgen wichtig genug für Vertagen, Recherche und Denkaufwand? Oder sowieso kaum absehbar? Nur in Ausnahmen lohnt das Nachdenken über die Wahl der Marmelade oder des gerade heute besten Arbeitswegs. Einfach entscheiden!</li>
+        <li>Ist schnell wichtiger als richtig? Ein Feuerwehrmann in Gefahr weiß: ganz falsch wäre nur, die Sache minutenlang zu durchdenken. Wenn Mitarbeiter kurz vor der Dienstreise des Chefs ohne dessen Hinweis tagelang nicht weiterkommen, mag jede sofortige Entscheidung besser sein als die beste nach der Rückkehr. Und ein Vorgesetzter erhält die ausreichende Zuarbeit der Mitarbeiter besser vor dem entscheidenden Termin als die perfekte Ausarbeitung, wenn es zu spät ist.</li>
+        <li>Ist die Situation ausgesprochen gut bekannt? Häufig selbst durchlebt? Dann wird die Analyse selten lohnen – und immer wieder zu schlechteren Ergebnissen führen als Ihr erstes Gefühl. Aber Vorsicht: Fünfmal ICE fahren erlaubt keine fundierte Aussage über die Pünktlichkeitsstatistik der Deutschen Bahn. Dafür ist die Fallzahl zu klein. Die Erfahrung muss denkbar groß sein, um die Ratio in der Qualität der Entscheidung zu schlagen.</li>
+      </ol>
+      In allen anderen Fällen hilft: Denken.
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        LITERATUR
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p><b>Jürgen August Alt:</b><br> Richtig argumentieren: oder wie man in Diskussionen Recht behält</p>
+      <p><b>Steven L. Johnson: </b><br> Winning Debates.<a
+          href="https://debate.uvm.edu/dcpdf/Steven_Johnson_Winning_Debates_2009.pdf"
+          target="_blank">https://debate.uvm.edu/dcpdf/Steven_Johnson_Winning_Debates_2009.pdf</a></p>
+      <p><b>Monthy Python Sketch:</b> <br> <a href="https://www.youtube.com/watch?v=ohDB5gbtaEQ"
+          target="_blank">https://www.youtube.com/watch?v=ohDB5gbtaEQ</a></p>
+
+       <p><b>Dan Ariely: Predictably Irrational</b><br>Revised: The Hidden Forces That Shape Our Decisions </p>
+          <p><b>  Daniel Kahnemann: </b><br>Schnelles Denken, langsames Denken</p>
+            <p><b>  Daniel Kahnemann:</b><br> Thinking. Fast and Slow.</p>
+              <p><b>Predictably Irrational, Revised: </b><br>The Hidden Forces That Shape Our Decisions</p>
+          <p><b>Video (externer Link):</b><br> Gerd Gigerenzer, how do smart people make smart decisions? <a href="https://www.youtube.com/watch?v=-Lg7G8TMe_A"
+            target="_blank">https://www.youtube.com/watch?v=-Lg7G8TMe_A</a></p>
+   
+          
+
+
+
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>QUERVERWEISE</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wo finde ich mehr zur Herleitung? Wie kann es weiter gehen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-planung']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Planung</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-selbstbildfremdbild']">
+   <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">
+      Selbstbild & Fremdbild nach Johari</div>
+    </ion-label>
+  </ion-item>
+  <ion-item [routerDirection]="'root'" [routerLink]="['/karte-selbstmanagement']">
+<ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+    <ion-label>
+      <div class="item">
+      Selbstmanagement nach Eisenhower </div>
+    </ion-label>
+  </ion-item>
+      
+    
+    </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>
+<ion-content *ngIf="getCurrentLang()=='en'" [ngClass]="{'offline' :textDefault=='notset'}">
+  <img src="/assets/img/karte-entscheidungskompetenz.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>Ziel</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was kann ich mit diesem Modell erreichen? 
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>Sie treffen bessere Entscheidungen. Und manchmal auch schnellere. Denn Sie wissen, wann sich das Denken lohnt und wann Sie auf Ihr Gefühl hören sollten.
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was ist die Ausgangslage?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Wir treffen ungezählte falsche Entscheidungen. Die meisten davon wegen einfacher Denkfehler. Und viele, obwohl uns die Sache wichtig ist.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>LÖSUNGSANSATZ</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wie komme ich von der Ausgangslage zum Ziel?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <p> Denken ist anstrengend. Und braucht Zeit. Wir sollten nur dann überlegen, wenn sich der Aufwand wahrscheinlich auszahlt. Tatsächlich treffen wir die meisten Entscheidungen weitgehend gedankenlos, vom Brotaufstrich beim Frühstück bis zum Fernsehprogramm am Abend. Dann wieder grübeln wir Wochen über den richtigen Toaster oder den besten Fernseher. Die Herausforderung ist also, schnell zu erkennen, ob Reflexion lohnt. Das gelingt in drei Schritten:
+      </p>
+      <ol>
+        <li>Sind die Folgen wichtig genug für Vertagen, Recherche und Denkaufwand? Oder sowieso kaum absehbar? Nur in Ausnahmen lohnt das Nachdenken über die Wahl der Marmelade oder des gerade heute besten Arbeitswegs. Einfach entscheiden!</li>
+        <li>Ist schnell wichtiger als richtig? Ein Feuerwehrmann in Gefahr weiß: ganz falsch wäre nur, die Sache minutenlang zu durchdenken. Wenn Mitarbeiter kurz vor der Dienstreise des Chefs ohne dessen Hinweis tagelang nicht weiterkommen, mag jede sofortige Entscheidung besser sein als die beste nach der Rückkehr. Und ein Vorgesetzter erhält die ausreichende Zuarbeit der Mitarbeiter besser vor dem entscheidenden Termin als die perfekte Ausarbeitung, wenn es zu spät ist.</li>
+        <li>Ist die Situation ausgesprochen gut bekannt? Häufig selbst durchlebt? Dann wird die Analyse selten lohnen – und immer wieder zu schlechteren Ergebnissen führen als Ihr erstes Gefühl. Aber Vorsicht: Fünfmal ICE fahren erlaubt keine fundierte Aussage über die Pünktlichkeitsstatistik der Deutschen Bahn. Dafür ist die Fallzahl zu klein. Die Erfahrung muss denkbar groß sein, um die Ratio in der Qualität der Entscheidung zu schlagen.</li>
+      </ol>
+      In allen anderen Fällen hilft: Denken.
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        LITERATUR
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+          <p><b>  Daniel Kahnemann: </b><br>Schnelles Denken, langsames Denken</p>
+            <p><b>  Daniel Kahnemann:</b><br> Thinking. Fast and Slow.</p>
+              <p><b>Predictably Irrational, Revised: </b><br>The Hidden Forces That Shape Our Decisions</p>
+          <p><b>Video (externer Link):</b><br> Gerd Gigerenzer, how do smart people make smart decisions? <a href="https://www.youtube.com/watch?v=-Lg7G8TMe_A"
+            target="_blank">https://www.youtube.com/watch?v=-Lg7G8TMe_A</a></p>
+          <p><b>Video (externer Link):</b><br> Gerd Gigerenzer, how do smart people make smart decisions? <a href="https://www.youtube.com/watch?v=-Lg7G8TMe_A"
+            target="_blank">https://www.youtube.com/watch?v=-Lg7G8TMe_A</a></p>
+          
+
+
+
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>QUERVERWEISE</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wo finde ich mehr zur Herleitung? Wie kann es weiter gehen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-planung']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item"> Planung</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-selbstbildfremdbild']">
+   <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">
+      Selbstbild & Fremdbild nach Johari</div>
+    </ion-label>
+  </ion-item>
+  <ion-item [routerDirection]="'root'" [routerLink]="['/karte-selbstmanagement']">
+<ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+    <ion-label>
+      <div class="item">
+      Selbstmanagement nach Eisenhower </div>
+    </ion-label>
+  </ion-item>
+      
+    
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/home']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+
+      <ion-button [routerDirection]="'root'" [routerLink]="['/cards']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="logo-buffer"></ion-icon>
+      </ion-button>
+      <ion-button [routerDirection]="'root'" [routerLink]="['/barcode']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="barcode"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

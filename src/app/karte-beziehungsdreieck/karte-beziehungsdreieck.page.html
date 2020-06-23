@@ -1,0 +1,292 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="getCurrentLang()=='de'">Redenschreiben - Beziehungsdreieck</ion-title>
+    <ion-title *ngIf="getCurrentLang()=='en'">Redenschreiben - Beziehungsdreieck</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-row *ngIf="textDefault=='notset'" class="ion-padding-vertical" id="notActive"
+  class="ion-text-center ion-align-items-end ion-justify-content-center ion-padding">
+  <div class="content">
+    <h2>{{ 'needto_activate' | translate }}</h2>
+    <ion-button color="primary" [routerDirection]="'root'" [routerLink]="['/barcode']">
+      <ion-icon name="barcode" style="display: inline-block; margin-right: 0.5em;"></ion-icon>
+      {{ 'menu.activate_pages' | translate }}
+    </ion-button>
+  </div>
+</ion-row>
+<ion-content *ngIf="getCurrentLang()=='de'" [ngClass]="{'offline' :textDefault=='notset'}">
+
+  <img src="/assets/img/karte-beziehungsdreieck.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>Ziel</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was kann ich mit diesem Modell erreichen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p> Ihre Rede spricht die relevanten impliziten und expliziten Fragen der Zuhörer an und beantwortet diese in angemessener Weise. Denn Sie können fundierte Aussagen darüber treffen, was das Publikum erwartet.</p>
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was ist die Ausgangslage?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      <p>Eine Rede vorzubereiten kostet Zeit, das spontane Vortragen ist risikoreich. In Inhalt (was gesagt wird), Methode (wie der Redner vorgeht) und Form (die Präsentation) sind die Möglichkeiten ungezählt. Wie 
+        wird der Redner eigenen Ansprüchen und fremden Erwartungen gerecht? Oder aus Sicht der Zuhörer: Warum lohnt sich das Zuhören?
+        </p>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>LÖSUNGSANSATZ</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wie komme ich von der Ausgangslage zum Ziel?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <p>Am Ende des Vortrages sollte das Publikum wissen, warum gerade dieser Redner zum ausgewählten Thema vor genau diesem Publikum spricht. Alle drei Ansätze sind mögliche Themen, auch ohne sie offen anzusprechen:
+      </p><ol><li>Was ist das Interesse des Publikums am Thema? Selbst wenn die Zuhörer wegen des Vor- oder Nachredners gekommen sind, kann dies eine Antwort auf die Frage sein: Einerseits ist vielen das Thema deutlich weniger wichtig als z.B. einen Prominenten zu erleben. Andererseits können Sie vielleicht erklären, wie das Interesse an einer anwesenden Person mit dem Thema zusammenhängt und was Sie jetzt beitragen können. Und: So schwer wie in diesem Beispiel haben Sie es selten.
+      </li><li>	Hat der Redner einen Bezug zum Thema? Von intensiver Beschäftigung über organisatorische Zuständigkeit (die selbst für Vertretungen gilt) bis hin zu persönlichen Erlebnissen kann Redner dem Publikum zeigen, dass er etwas zu sagen hat. Er kann auch seine Persönlichkeit, seine Erlebnisse und Meinungen nutzen. Denn diese Gedanken machen den Unterschied aus zu Rechtstexten, Fachartikeln usw. aber auch zu Werbekatalogen und Powerpointfolien.
+      </li> </ol>	  <p>  Hat der Redner eine Verbindung zum Publikum? Woher z.B. kommt sein Interesse an den Zuhörern? Diese Brücken zwischen den Welten des Redners und der Zuhörer müssen stabil sein, um nicht aufgesetzt zu wirken. „Ich war auch mal jung“ ist eher ein wackeliger Steg, die Brücke „ich brauche Ihre Berufsgruppe für mein Vorhaben“ hingegen kann einer stürmischen Veranstaltung standhalten.
+        
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        LITERATUR
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <p><b> Imai-Alexandra Roehreke:  </b><br>Reden schreiben</p>
+    
+
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>QUERVERWEISE</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wo finde ich mehr zur Herleitung? Wie kann es weiter gehen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-gliederunguredestruktur']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Gliederung & Redestruktur</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-senderuempfaenger']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">
+      Sender & Empfänger</div>
+    </ion-label>
+  </ion-item>
+  <ion-item [routerDirection]="'root'" [routerLink]="['/karte-manuskripttechnik']">
+    <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+    <ion-label>
+      <div class="item">
+      Manuskripttechnik</div>
+    </ion-label>
+  </ion-item>
+  <ion-item [routerDirection]="'root'" [routerLink]="['/karte-steuerungszeichen']">
+    <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+    <ion-label>
+      <div class="item">
+      Steuerungszeichen </div>
+    </ion-label>
+  </ion-item>
+     </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>
+<ion-content *ngIf="getCurrentLang()=='en'" [ngClass]="{'offline' :textDefault=='notset'}">
+  
+  <img src="/assets/img/karte-beziehungsdreieck.png" />
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>Ziel</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was kann ich mit diesem Modell erreichen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p> Ihre Rede spricht die relevanten impliziten und expliziten Fragen der Zuhörer an und beantwortet diese in angemessener Weise. Denn Sie können fundierte Aussagen darüber treffen, was das Publikum erwartet.</p>
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>PROBLEM</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Was ist die Ausgangslage?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      <p>Eine Rede vorzubereiten kostet Zeit, das spontane Vortragen ist risikoreich. In Inhalt (was gesagt wird), Methode (wie der Redner vorgeht) und Form (die Präsentation) sind die Möglichkeiten ungezählt. Wie 
+        wird der Redner eigenen Ansprüchen und fremden Erwartungen gerecht? Oder aus Sicht der Zuhörer: Warum lohnt sich das Zuhören?
+        </p>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>LÖSUNGSANSATZ</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wie komme ich von der Ausgangslage zum Ziel?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <p>Am Ende des Vortrages sollte das Publikum wissen, warum gerade dieser Redner zum ausgewählten Thema vor genau diesem Publikum spricht. Alle drei Ansätze sind mögliche Themen, auch ohne sie offen anzusprechen:
+      </p><ol><li>Was ist das Interesse des Publikums am Thema? Selbst wenn die Zuhörer wegen des Vor- oder Nachredners gekommen sind, kann dies eine Antwort auf die Frage sein: Einerseits ist vielen das Thema deutlich weniger wichtig als z.B. einen Prominenten zu erleben. Andererseits können Sie vielleicht erklären, wie das Interesse an einer anwesenden Person mit dem Thema zusammenhängt und was Sie jetzt beitragen können. Und: So schwer wie in diesem Beispiel haben Sie es selten.
+      </li><li>	Hat der Redner einen Bezug zum Thema? Von intensiver Beschäftigung über organisatorische Zuständigkeit (die selbst für Vertretungen gilt) bis hin zu persönlichen Erlebnissen kann Redner dem Publikum zeigen, dass er etwas zu sagen hat. Er kann auch seine Persönlichkeit, seine Erlebnisse und Meinungen nutzen. Denn diese Gedanken machen den Unterschied aus zu Rechtstexten, Fachartikeln usw. aber auch zu Werbekatalogen und Powerpointfolien.
+      </li> </ol>	  <p>  Hat der Redner eine Verbindung zum Publikum? Woher z.B. kommt sein Interesse an den Zuhörern? Diese Brücken zwischen den Welten des Redners und der Zuhörer müssen stabil sein, um nicht aufgesetzt zu wirken. „Ich war auch mal jung“ ist eher ein wackeliger Steg, die Brücke „ich brauche Ihre Berufsgruppe für mein Vorhaben“ hingegen kann einer stürmischen Veranstaltung standhalten.
+        
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        LITERATUR
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <p><b> Imai-Alexandra Roehreke:  </b><br>Reden schreiben</p>
+    
+
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <b>QUERVERWEISE</b>
+        <br />
+      </ion-card-subtitle>
+      <ion-card-title>
+        Wo finde ich mehr zur Herleitung? Wie kann es weiter gehen?
+        <br />
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-gliederunguredestruktur']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">Gliederung & Redestruktur</div>
+        </ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="['/karte-senderuempfaenger']">
+        <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+        <ion-label>
+          <div class="item">
+      Sender & Empfänger</div>
+    </ion-label>
+  </ion-item>
+  <ion-item [routerDirection]="'root'" [routerLink]="['/karte-manuskripttechnik']">
+    <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+    <ion-label>
+      <div class="item">
+      Manuskripttechnik</div>
+    </ion-label>
+  </ion-item>
+  <ion-item [routerDirection]="'root'" [routerLink]="['/karte-steuerungszeichen']">
+    <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+    <ion-label>
+      <div class="item">
+      Steuerungszeichen </div>
+    </ion-label>
+  </ion-item>
+     </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button [routerDirection]="'root'" [routerLink]="['/home']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+      <ion-button [routerDirection]="'root'" [routerLink]="['/cards']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="logo-buffer"></ion-icon>
+      </ion-button>
+      <ion-button [routerDirection]="'root'" [routerLink]="['/barcode']" routerLinkActive="active">
+        <ion-icon slot="icon-only" name="barcode"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
