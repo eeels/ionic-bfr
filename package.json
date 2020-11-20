@@ -1,6 +1,6 @@
 {
   "name": "BFR",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "author": "pview",
   "homepage": "",
   "scripts": {
@@ -28,6 +28,8 @@
     "@ionic/storage": "^2.3.1",
     "@ngx-translate/core": "^11.0.1",
     "@ngx-translate/http-loader": "^4.0.0",
+    "autoprefixer": "^10.0.2",
+    "caniuse-lite": "^1.0.30001159",
     "cordova-android": "^8.1.0",
     "cordova-ios": "5.0.1",
     "cordova-plugin-ionic": "^5.4.7",
