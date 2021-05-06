@@ -1,6 +1,6 @@
  <ion-app>
-   <ion-split-pane>
-     <ion-menu type="overlay" color="primary" Id="content1" (ionWillOpen)="onMenuOpen()">
+   <ion-split-pane contentId="main-content">
+     <ion-menu type="overlay" color="primary" Id="content1" contentId="main-content" (ionWillOpen)="onMenuOpen()">
        <ion-header>
          <ion-toolbar>
            <div class="titleicon ion-padding">
@@ -23,20 +23,20 @@
            <ion-menu-toggle>
              <ion-item [routerDirection]="'root'" [routerLink]="['/home']" (click)="clearLevel()" no-lines ines=“none”
                mode='md'>
-               <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+               <ion-icon name="chevron-forward-outline" slot="end" color="light"></ion-icon>
                <ion-label>Starteite</ion-label>
              </ion-item>
            </ion-menu-toggle>
          
            <ion-menu-toggle>
              <ion-item [routerDirection]="'root'" [routerLink]="['/barcode']" mode='md'>
-              <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+              <ion-icon name="chevron-forward-outline" slot="end" color="light"></ion-icon>
                <ion-label>Karten freischalten</ion-label>
              </ion-item>
            </ion-menu-toggle>
            <ion-menu-toggle>
             <ion-item [routerDirection]="'root'" [routerLink]="['/imprint']" mode='md'>
-              <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+              <ion-icon name="chevron-forward-outline" slot="end" color="light"></ion-icon>
               <ion-label>Impressum</ion-label>
             </ion-item>
           </ion-menu-toggle>
@@ -58,26 +58,26 @@
            <ion-menu-toggle>
              <ion-item [routerDirection]="'root'" [routerLink]="['/home']" (click)="clearLevel()" no-lines ines=“none”
                mode='md'>
-               <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+               <ion-icon name="chevron-forward-outline" slot="end" color="light"></ion-icon>
                <ion-label>Home</ion-label>
              </ion-item>
            </ion-menu-toggle>
           
            <ion-menu-toggle>
              <ion-item [routerDirection]="'root'" [routerLink]="['/barcode']" mode='md'>
-              <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+              <ion-icon name="chevron-forward-outline" slot="end" color="light"></ion-icon>
                <ion-label>Unlock cards</ion-label>
              </ion-item>
            </ion-menu-toggle>
            <ion-menu-toggle>
             <ion-item [routerDirection]="'root'" [routerLink]="['/imprint']" mode='md'>
-              <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+              <ion-icon name="chevron-forward-outline" slot="end" color="light"></ion-icon>
               <ion-label>Imprint</ion-label>
             </ion-item>
           </ion-menu-toggle>
          </ion-list>
        </ion-content>
      </ion-menu>
-     <ion-router-outlet main></ion-router-outlet>
+     <ion-router-outlet id="main-content"main></ion-router-outlet>
    </ion-split-pane>
  </ion-app>
