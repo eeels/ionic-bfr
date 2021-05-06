@@ -14,7 +14,7 @@
   <ion-card><div *ngFor="let p of menuData; let i=index;">
     <ion-item *ngIf="isElActive(p.id)"  [routerDirection]="'root'" [routerLink]="[p.url]" class="menu-list-item">
       <ion-icon name="checkmark" class="ion-padding-end" color="primary"></ion-icon>
-      <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+      <ion-icon name="chevron-forward-outline" slot="end" color="light"></ion-icon>
       <ion-label>
         <div class="item"><b>{{p.name}}</b> </div>
       </ion-label>
@@ -26,7 +26,7 @@
     <div *ngFor="let p of menuData; let i=index;">
     <ion-item *ngIf="!isElActive(p.id)"  [routerDirection]="'root'" [routerLink]="[p.url]" class="menu-list-item">
       <ion-icon name="checkmark" class="ion-padding-end" color="light"></ion-icon>
-      <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+      <ion-icon name="chevron-forward-outline" slot="end" color="light"></ion-icon>
       <ion-label>
         <div class="item"><b>{{p.name}}</b> </div>
       </ion-label>
@@ -42,7 +42,7 @@
   <ion-card><div *ngFor="let p of menuData; let i=index;">
     <ion-item *ngIf="isElActive(p.id)"  [routerDirection]="'root'" [routerLink]="[p.url]" class="menu-list-item">
       <ion-icon name="checkmark" class="ion-padding-end" color="primary"></ion-icon>
-      <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+      <ion-icon name="chevron-forward-outline" slot="end" color="light"></ion-icon>
       <ion-label>
         <div class="item"><b>{{p.name}}</b> </div>
       </ion-label>
@@ -54,7 +54,7 @@
     <div *ngFor="let p of menuData; let i=index;">
     <ion-item *ngIf="!isElActive(p.id)"  [routerDirection]="'root'" [routerLink]="[p.url]" class="menu-list-item">
       <ion-icon name="checkmark" class="ion-padding-end" color="light"></ion-icon>
-      <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+      <ion-icon name="chevron-forward-outline" slot="end" color="light"></ion-icon>
       <ion-label>
         <div class="item"><b>{{p.name}}</b> </div>
       </ion-label>
