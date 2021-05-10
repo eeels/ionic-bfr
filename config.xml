@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.ionic.bfr" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="io.ionic.bfr" version="1.0.0" xmlns="http://www.w3.org/ns/widgets"
+    xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>BFR</name>
     <description />
     <author email="Adignos" href="https://adignos.de/" />
@@ -20,10 +21,12 @@
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="3000" />
     <platform name="android">
-        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application" xmlns:android="http://schemas.android.com/apk/res/android">
+        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application"
+            xmlns:android="http://schemas.android.com/apk/res/android">
             <application android:networkSecurityConfig="@xml/network_security_config" />
         </edit-config>
-        <resource-file src="resources/android/xml/network_security_config.xml" target="app/src/main/res/xml/network_security_config.xml" />
+        <resource-file src="resources/android/xml/network_security_config.xml"
+            target="app/src/main/res/xml/network_security_config.xml" />
         <allow-intent href="market:*" />
         <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
         <icon density="mdpi" src="resources/android/icon/drawable-mdpi-icon.png" />
@@ -47,9 +50,10 @@
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
-        <edit-config file="*-Info.plist" mode="merge" target="NSCameraUsageDescription">
-            <string>To scan barcodes</string>
-        </edit-config>
+
+        <config-file parent="NSCameraUsageDescription" platform="ios" target="*-Info.plist">
+            <string>You can take photos</string>
+        </config-file>
         <icon height="57" src="resources/ios/icon/icon.png" width="57" />
         <icon height="114" src="resources/ios/icon/icon@2x.png" width="114" />
         <icon height="29" src="resources/ios/icon/icon-small.png" width="29" />
