@@ -11,7 +11,7 @@
        <ion-content *ngIf="getCurrentLang()=='de'">
          <ion-menu-toggle>
            <ion-item>
-
+            <ion-label>Sprache</ion-label>
              <ion-select #langSelect (ionChange)='changeLang(langSelect.value)' cancelText="" okText="Ok"
                class="ion-align-self-end" id="langSelect" slot="end">
                <ion-select-option value='de' selected>Deutsch</ion-select-option>
